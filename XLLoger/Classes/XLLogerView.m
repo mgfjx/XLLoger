@@ -130,7 +130,7 @@
     
     UIButton *closeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [closeBtn addTarget:self action:@selector(closeSelf) forControlEvents:UIControlEventTouchUpInside];
-    [closeBtn setImage:[UIImage imageNamed:@"close"] forState:UIControlStateNormal];
+    [closeBtn setImage:[self imageForResourcePath:@"XLLoger.bundle/close" ofType:@"png" inBundle:[NSBundle bundleForClass:[self class]]] forState:UIControlStateNormal];
     closeBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentFill;
     closeBtn.contentVerticalAlignment = UIControlContentVerticalAlignmentFill;
     [self.topView addSubview:closeBtn];
@@ -149,7 +149,7 @@
     {
         UIButton *clearBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         [clearBtn addTarget:self action:@selector(clearText) forControlEvents:UIControlEventTouchUpInside];
-        [clearBtn setImage:[UIImage imageNamed:@"clear"] forState:UIControlStateNormal];
+        [clearBtn setImage:[self imageForResourcePath:@"XLLoger.bundle/clear" ofType:@"png" inBundle:[NSBundle bundleForClass:[self class]]] forState:UIControlStateNormal];
         clearBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentFill;
         clearBtn.contentVerticalAlignment = UIControlContentVerticalAlignmentFill;
         [self.topView addSubview:clearBtn];
@@ -247,6 +247,10 @@
         contentOffsetX = point.x;
         contentOffsetY = point.y;
     }
+}
+
+- (UIImage *)imageForResourcePath:(NSString *)path ofType:(NSString *)type inBundle:(NSBundle *)bundle {
+    return [UIImage imageWithContentsOfFile:[bundle pathForResource:path ofType:type]];
 }
 
 #pragma mark - UITextViewDelegate

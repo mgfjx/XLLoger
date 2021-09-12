@@ -19,11 +19,13 @@
     "git": "https://github.com/mgfjx/XLLoger.git",
     "tag": "0.0.1"
   },
-  "source_files": [
-    "Classes",
-    "XLLoger/**/*.{h,m}"
-  ],
-  "public_header_files": "XLLoger/*.h",
+  "source_files": "XLLoger/Classes/**/*",
+  "resource_bundles": {
+    "XLLoger": [
+      "XLLoger/Assets/*.png"
+    ]
+  },
+  "public_header_files": "XLLoger/Classes/*.h",
   "requires_arc": true,
   "frameworks": "UIKit"
 }

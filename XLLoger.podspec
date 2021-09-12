@@ -12,8 +12,11 @@ Pod::Spec.new do |spec|
   spec.platform     = :ios, "8.0"
   spec.ios.deployment_target = "8.0"
   spec.source       = { :git => "https://github.com/mgfjx/XLLoger.git", :tag => "#{spec.version}" }
-  spec.source_files  = "Classes", "XLLoger/**/*.{h,m}"
-  spec.public_header_files = "XLLoger/*.h"
+  spec.source_files  = "XLLoger/Classes/**/*"
+  spec.resource_bundles = {
+    'XLLoger' => ['XLLoger/Assets/*.png']
+  }
+  spec.public_header_files = "XLLoger/Classes/*.h"
   spec.requires_arc = true
   spec.framework     = "UIKit"
 

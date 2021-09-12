@@ -8,40 +8,54 @@
 
 /* Begin PBXBuildFile section */
 		0152E345911F2066826B2CE3B0A81B23 /* Pods-XLLogerDemo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 21380BBB24316EF757E0B1B677D6D742 /* Pods-XLLogerDemo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1C492125E98CF53EE25837550A21B85E /* XLLoger-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F8DABA355B35DE9972160BCCF24D74FC /* XLLoger-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		117211DEE6B8E4026469877EBA1B867A /* XLLoger-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EB2146B6167C8A16E81C387238F1B18 /* XLLoger-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D33FC763544766D7FA6684BB7A1EFE0 /* close@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D0D15F5954D651EE70A3C5DA903D919 /* close@3x.png */; };
 		236120AF99A0B903A80BD8D4945CD67B /* Pods-XLLogerDemo-XLLogerDemoUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E953853AE015AEB9B83C6260B47658 /* Pods-XLLogerDemo-XLLogerDemoUITests-dummy.m */; };
+		28530B0319038AA30AD744CDBF26D655 /* XLLogerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DAC7E35EA4A0FD931839E906B175A3D8 /* XLLogerManager.m */; };
+		2F54A88228DDD192DABCEA3D3DFD438E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */; };
 		38C3C922B4107C59A6FFCE3C1BB339E4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
+		3CE96E1FA4107E8D4ADB2EF46E4E9AE6 /* XLLogerView.h in Headers */ = {isa = PBXBuildFile; fileRef = C7ADF81CD23C6DC95EC32397DCD5318D /* XLLogerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		42B32E6988461C462857B367DE2B6508 /* XLLogerManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BEDEAD42ED580540C769513FD8613DC /* XLLogerManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		473279EAE27C81520889DA92E4B7E77E /* clear.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FB1B0B32FFB561EF32CF64C40FB5279 /* clear.png */; };
 		4965C7AC33F2D9A4E2083CCD6E85F562 /* Pods-XLLogerDemo-XLLogerDemoUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C635C8BC6BB41DA64052896C97D51739 /* Pods-XLLogerDemo-XLLogerDemoUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4CE7ABA84226B0DFFED94B3F4D53857C /* Pods-XLLogerDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F29A3A137FCCE550985C010B8B55175D /* Pods-XLLogerDemo-dummy.m */; };
-		5237342C611D9BFB806CC506D0E25A03 /* XLLogerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 11DB5EF77788FCE3C62CA2DF172455D0 /* XLLogerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5CB94CFACEB884500BFC2CDAB44C0BBB /* XLLogerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FC0AF43EDC2A67D2CF871E9C4634B26D /* XLLogerManager.m */; };
-		5E6D13EE7DABC4C85884ADB3B1F19EBA /* XLLoger-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C7578FD620D95B5C9BBC2D678CB3F4E /* XLLoger-dummy.m */; };
-		6569E86B2824F832BFE2C78F2AFD77E4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
+		55344AD657C15B5FFC6D8BA98A713BD1 /* XLLogerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A00822DCCE8B98D33E965983E9C26B /* XLLogerView.m */; };
+		5EDBD36306C02B68AB5CCCC4DDDC71AC /* XLLoger.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 95DCA7C7653D9A59436593452F339371 /* XLLoger.bundle */; };
 		89D01539527810971A4C23AF495107F4 /* Pods-XLLogerDemoTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C4FC1D553A56691678FB7AC1F6DA619C /* Pods-XLLogerDemoTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		957B57CE18EF3F1866664DBDF201BB63 /* close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E7CC9BCB1B9468AAE86ED352EAD4B2CB /* close@2x.png */; };
+		A8275A987744BAA760EBC0FDAD30637C /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A9F0A271945BE7A952E8DB57B239317 /* close.png */; };
 		AD2F27053783278B0B1E02F525543EB2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
 		B2A6A26C2C6A8F1B8BF030E1D24BDFC5 /* Pods-XLLogerDemoTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6036912CB63A167782F17ED3239A20CB /* Pods-XLLogerDemoTests-dummy.m */; };
-		B43C4381E7B5C5377CCA849394B8E009 /* XLLogerManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 884BFCEFAF8254169BAC1790458BB6D9 /* XLLogerManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B5CBC199B12A1AA9587337524E71F6AA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
-		CBC53AB642D277EA2BC4380ED7B58350 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */; };
-		FF102D30D28A11E6882B39FC1851BF8C /* XLLogerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC213AFD0DEB6DB549C0CEE94F738345 /* XLLogerView.m */; };
+		CAD7BCD71B5F6E3608E67C1D9A4E848F /* clear@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50F04D8AF1103C5DEFBC0EF9B13DE632 /* clear@2x.png */; };
+		D0C97ACFDFC5EC042EE91476581956A4 /* XLLoger-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 48A12EE52B7533E3B858C7F23E1D3CC8 /* XLLoger-dummy.m */; };
+		E9867465E5996339095EDFC1D62502B6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
+		F666E9AFA57480F0B673ABCECE4FFEA0 /* clear@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA08B6938B5031D452E2F56C29DA99A7 /* clear@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		82722A108F6126EC412BAF95D9585F01 /* PBXContainerItemProxy */ = {
+		2ADB6434E8AEE90E43DE01C4DF790FF3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 01ADD26729B200E6F1E658B880FC27C2;
 			remoteInfo = XLLoger;
 		};
-		91230A01DA2C78F88847D1CA8FEB2DBE /* PBXContainerItemProxy */ = {
+		6E99B761E32A3A27C8C89C1D899B53F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 082F1019C71BF25FDD6D4FA7FD41B141;
+			remoteInfo = "XLLoger-XLLoger";
+		};
+		983452F5C51371606E5AB2703CAF3595 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 01ADD26729B200E6F1E658B880FC27C2;
 			remoteInfo = XLLoger;
 		};
-		F9200A7DD4266377F3AD5A8AD1F2F32A /* PBXContainerItemProxy */ = {
+		D24760DA3D40F84F56493816BB7F574E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -52,55 +66,70 @@
 
 /* Begin PBXFileReference section */
 		0113E392CAA5CB202A7D1F472D35BF4F /* Pods-XLLogerDemo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-XLLogerDemo.modulemap"; sourceTree = "<group>"; };
-		11DB5EF77788FCE3C62CA2DF172455D0 /* XLLogerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XLLogerView.h; path = XLLoger/XLLogerView.h; sourceTree = "<group>"; };
+		074D74E597429C838E80D3AC57421576 /* XLLoger.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = XLLoger.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		135F2B6DE05D58A87C4B2654AEE9D3CA /* Pods-XLLogerDemo-XLLogerDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XLLogerDemo-XLLogerDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		21380BBB24316EF757E0B1B677D6D742 /* Pods-XLLogerDemo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-XLLogerDemo-umbrella.h"; sourceTree = "<group>"; };
+		24A00822DCCE8B98D33E965983E9C26B /* XLLogerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = XLLogerView.m; path = XLLoger/Classes/XLLogerView.m; sourceTree = "<group>"; };
+		2EF97E3125AD8F9C22F6B4A34878F4E8 /* ResourceBundle-XLLoger-XLLoger-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-XLLoger-XLLoger-Info.plist"; sourceTree = "<group>"; };
 		342CD219B053FD1843F0613916E0F916 /* XLLoger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = XLLoger.framework; path = XLLoger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		38419B081CF971621DABEA956300AEA5 /* XLLoger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = XLLoger.release.xcconfig; sourceTree = "<group>"; };
+		3E13A28C30D74541C8995F3396B3FF1E /* XLLoger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = XLLoger.release.xcconfig; sourceTree = "<group>"; };
 		46BBCAB9370414BF191198280EF6CB72 /* Pods-XLLogerDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XLLogerDemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		47501E33C0FD7FAD419F0F344DD79F35 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		48A12EE52B7533E3B858C7F23E1D3CC8 /* XLLoger-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "XLLoger-dummy.m"; sourceTree = "<group>"; };
+		4EB2146B6167C8A16E81C387238F1B18 /* XLLoger-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XLLoger-umbrella.h"; sourceTree = "<group>"; };
+		50F04D8AF1103C5DEFBC0EF9B13DE632 /* clear@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "clear@2x.png"; path = "XLLoger/Assets/clear@2x.png"; sourceTree = "<group>"; };
 		54B7D69287C08A4C2460BEC3ABB8E379 /* Pods-XLLogerDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XLLogerDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		5A9F0A271945BE7A952E8DB57B239317 /* close.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = close.png; path = XLLoger/Assets/close.png; sourceTree = "<group>"; };
 		5ACB430C4CA4B2639A97400F4B85457E /* Pods-XLLogerDemoTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-XLLogerDemoTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		5D6B4FF0F1BF2F427F72E8F1804749EB /* Pods-XLLogerDemoTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-XLLogerDemoTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		5E0B30CB312765B1CF9A419B0DE68941 /* Pods-XLLogerDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-XLLogerDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
 		5FA9CDAE45CA9679642D677CCCC12BE3 /* Pods_XLLogerDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_XLLogerDemoTests.framework; path = "Pods-XLLogerDemoTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FB1B0B32FFB561EF32CF64C40FB5279 /* clear.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = clear.png; path = XLLoger/Assets/clear.png; sourceTree = "<group>"; };
+		5FB9801E0F9D9A35A6A953E3CE36D3D3 /* XLLoger-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XLLoger-prefix.pch"; sourceTree = "<group>"; };
 		6036912CB63A167782F17ED3239A20CB /* Pods-XLLogerDemoTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-XLLogerDemoTests-dummy.m"; sourceTree = "<group>"; };
 		68E953853AE015AEB9B83C6260B47658 /* Pods-XLLogerDemo-XLLogerDemoUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-XLLogerDemo-XLLogerDemoUITests-dummy.m"; sourceTree = "<group>"; };
-		7E535657212914BE32057AF08AA97EE9 /* XLLoger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = XLLoger.debug.xcconfig; sourceTree = "<group>"; };
-		884BFCEFAF8254169BAC1790458BB6D9 /* XLLogerManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XLLogerManager.h; path = XLLoger/XLLogerManager.h; sourceTree = "<group>"; };
-		8C7578FD620D95B5C9BBC2D678CB3F4E /* XLLoger-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "XLLoger-dummy.m"; sourceTree = "<group>"; };
+		6BEDEAD42ED580540C769513FD8613DC /* XLLogerManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XLLogerManager.h; path = XLLoger/Classes/XLLogerManager.h; sourceTree = "<group>"; };
+		89CC41479DCDE2D3D30B0E833572BC81 /* XLLoger.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = XLLoger.modulemap; sourceTree = "<group>"; };
 		8F2298C6B80FF5C9884B0352F0128662 /* Pods-XLLogerDemo-XLLogerDemoUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-XLLogerDemo-XLLogerDemoUITests-frameworks.sh"; sourceTree = "<group>"; };
-		97832D51266FCD5E43E66C0D60648A93 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		9444F834CE211C2FAAF0BC197B637D3C /* XLLoger-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "XLLoger-Info.plist"; sourceTree = "<group>"; };
+		95DCA7C7653D9A59436593452F339371 /* XLLoger.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = XLLoger.bundle; path = "XLLoger-XLLoger.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
 		991193328C35E91406E1F8EFDAE7B5AC /* Pods-XLLogerDemoTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-XLLogerDemoTests-Info.plist"; sourceTree = "<group>"; };
 		9B478572FAFC762978CF2B8D2741C6A0 /* Pods_XLLogerDemo_XLLogerDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_XLLogerDemo_XLLogerDemoUITests.framework; path = "Pods-XLLogerDemo-XLLogerDemoUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D0D15F5954D651EE70A3C5DA903D919 /* close@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "close@3x.png"; path = "XLLoger/Assets/close@3x.png"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A4AAAC60950EF7DC878F2CFD91886ECA /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		A975BB03897DA6D1C31C7EC605E095E3 /* Pods-XLLogerDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XLLogerDemo.release.xcconfig"; sourceTree = "<group>"; };
-		B093D02A399A96611F023BC802536D94 /* XLLoger-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "XLLoger-Info.plist"; sourceTree = "<group>"; };
+		AA08B6938B5031D452E2F56C29DA99A7 /* clear@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "clear@3x.png"; path = "XLLoger/Assets/clear@3x.png"; sourceTree = "<group>"; };
 		B394535E82A717DB4183E679187E1C67 /* Pods-XLLogerDemo-XLLogerDemoUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-XLLogerDemo-XLLogerDemoUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		B3C00CDAE89E30B4DB0533A240ECA8E3 /* Pods-XLLogerDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-XLLogerDemo-acknowledgements.plist"; sourceTree = "<group>"; };
 		B74D0AB80AABCFD8D50DCE1E725E9081 /* Pods-XLLogerDemoTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-XLLogerDemoTests.modulemap"; sourceTree = "<group>"; };
+		BEB99DC1C579B285F350326A4180BC96 /* XLLoger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = XLLoger.debug.xcconfig; sourceTree = "<group>"; };
 		C4FC1D553A56691678FB7AC1F6DA619C /* Pods-XLLogerDemoTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-XLLogerDemoTests-umbrella.h"; sourceTree = "<group>"; };
 		C635C8BC6BB41DA64052896C97D51739 /* Pods-XLLogerDemo-XLLogerDemoUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-XLLogerDemo-XLLogerDemoUITests-umbrella.h"; sourceTree = "<group>"; };
 		C6A54C0D5A6C1BAE12C5E9A28DD8A422 /* Pods-XLLogerDemo-XLLogerDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XLLogerDemo-XLLogerDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		C8A3CFABA74CB9C80DED3CA7042AC301 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		C7ADF81CD23C6DC95EC32397DCD5318D /* XLLogerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XLLogerView.h; path = XLLoger/Classes/XLLogerView.h; sourceTree = "<group>"; };
 		CAE005B5E128C93F33BC6EBDF06D9107 /* Pods-XLLogerDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XLLogerDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		D2CAE8B1A404C852AFBEC67F56E17F52 /* Pods-XLLogerDemo-XLLogerDemoUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-XLLogerDemo-XLLogerDemoUITests-Info.plist"; sourceTree = "<group>"; };
-		DC213AFD0DEB6DB549C0CEE94F738345 /* XLLogerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = XLLogerView.m; path = XLLoger/XLLogerView.m; sourceTree = "<group>"; };
+		DAC7E35EA4A0FD931839E906B175A3D8 /* XLLogerManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = XLLogerManager.m; path = XLLoger/Classes/XLLogerManager.m; sourceTree = "<group>"; };
 		E064E3783B02B9E01B69EB721AF88055 /* Pods_XLLogerDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_XLLogerDemo.framework; path = "Pods-XLLogerDemo.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E6C4E7D3E38D32DE1C49957F3322B775 /* XLLoger-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XLLoger-prefix.pch"; sourceTree = "<group>"; };
+		E7CC9BCB1B9468AAE86ED352EAD4B2CB /* close@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "close@2x.png"; path = "XLLoger/Assets/close@2x.png"; sourceTree = "<group>"; };
 		EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		EB92B497021278B0D04D664BE3B3EA77 /* Pods-XLLogerDemo-XLLogerDemoUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-XLLogerDemo-XLLogerDemoUITests.modulemap"; sourceTree = "<group>"; };
-		F1AF11098147F07320B1875A2DB438B6 /* XLLoger.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = XLLoger.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		F293B28CA47F2834E88EFA5780E957CF /* Pods-XLLogerDemo-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-XLLogerDemo-Info.plist"; sourceTree = "<group>"; };
 		F29A3A137FCCE550985C010B8B55175D /* Pods-XLLogerDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-XLLogerDemo-dummy.m"; sourceTree = "<group>"; };
-		F8DABA355B35DE9972160BCCF24D74FC /* XLLoger-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XLLoger-umbrella.h"; sourceTree = "<group>"; };
-		FACD9617D23C7E4FD77BF351F03149BD /* XLLoger.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = XLLoger.modulemap; sourceTree = "<group>"; };
 		FB2EA357736D25A67D30703D1C6E9A5A /* Pods-XLLogerDemo-XLLogerDemoUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-XLLogerDemo-XLLogerDemoUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		FC0AF43EDC2A67D2CF871E9C4634B26D /* XLLogerManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = XLLogerManager.m; path = XLLoger/XLLogerManager.m; sourceTree = "<group>"; };
 		FD856CE7CAFC0961E20E30276FE09F52 /* Pods-XLLogerDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-XLLogerDemo-frameworks.sh"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1B89BFD023C14BF521C8D3AB76E5C07A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7A11B1DD3412B38AB456B4087376B670 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -109,20 +138,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9583ED3DD474DD5181CF3CB1AF43E6CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9867465E5996339095EDFC1D62502B6 /* Foundation.framework in Frameworks */,
+				2F54A88228DDD192DABCEA3D3DFD438E /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AF583164A49E36B69F8086CB1E975DB3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				38C3C922B4107C59A6FFCE3C1BB339E4 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C5B4D4163130FBDE67FE10D980FCFC57 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6569E86B2824F832BFE2C78F2AFD77E4 /* Foundation.framework in Frameworks */,
-				CBC53AB642D277EA2BC4380ED7B58350 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,21 +166,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		08647329F791DFAB30E9224366C56747 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				FACD9617D23C7E4FD77BF351F03149BD /* XLLoger.modulemap */,
-				8C7578FD620D95B5C9BBC2D678CB3F4E /* XLLoger-dummy.m */,
-				B093D02A399A96611F023BC802536D94 /* XLLoger-Info.plist */,
-				E6C4E7D3E38D32DE1C49957F3322B775 /* XLLoger-prefix.pch */,
-				F8DABA355B35DE9972160BCCF24D74FC /* XLLoger-umbrella.h */,
-				7E535657212914BE32057AF08AA97EE9 /* XLLoger.debug.xcconfig */,
-				38419B081CF971621DABEA956300AEA5 /* XLLoger.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "XLLogerDemo/Pods/Target Support Files/XLLoger";
-			sourceTree = "<group>";
-		};
 		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -176,14 +190,6 @@
 			path = "Target Support Files/Pods-XLLogerDemoTests";
 			sourceTree = "<group>";
 		};
-		3E553DBF919F65418820A6DCDD432C5F /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				B230A902C083363FCEEBAF0F2B8CDD06 /* XLLoger */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
 		59DA5C1F72E1D5BABC43EACBA672C3BA /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -193,12 +199,40 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		A80E046CD7708482783C7C30E88E723F /* Pod */ = {
+		6025A63668D66AF70F0EA71A167E1AA2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C8A3CFABA74CB9C80DED3CA7042AC301 /* LICENSE */,
-				97832D51266FCD5E43E66C0D60648A93 /* README.md */,
-				F1AF11098147F07320B1875A2DB438B6 /* XLLoger.podspec */,
+				E064E3783B02B9E01B69EB721AF88055 /* Pods_XLLogerDemo.framework */,
+				9B478572FAFC762978CF2B8D2741C6A0 /* Pods_XLLogerDemo_XLLogerDemoUITests.framework */,
+				5FA9CDAE45CA9679642D677CCCC12BE3 /* Pods_XLLogerDemoTests.framework */,
+				95DCA7C7653D9A59436593452F339371 /* XLLoger.bundle */,
+				342CD219B053FD1843F0613916E0F916 /* XLLoger.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7B84F7E43CEE8B6E0E7458031F810BAD /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2EF97E3125AD8F9C22F6B4A34878F4E8 /* ResourceBundle-XLLoger-XLLoger-Info.plist */,
+				89CC41479DCDE2D3D30B0E833572BC81 /* XLLoger.modulemap */,
+				48A12EE52B7533E3B858C7F23E1D3CC8 /* XLLoger-dummy.m */,
+				9444F834CE211C2FAAF0BC197B637D3C /* XLLoger-Info.plist */,
+				5FB9801E0F9D9A35A6A953E3CE36D3D3 /* XLLoger-prefix.pch */,
+				4EB2146B6167C8A16E81C387238F1B18 /* XLLoger-umbrella.h */,
+				BEB99DC1C579B285F350326A4180BC96 /* XLLoger.debug.xcconfig */,
+				3E13A28C30D74541C8995F3396B3FF1E /* XLLoger.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "XLLogerDemo/Pods/Target Support Files/XLLoger";
+			sourceTree = "<group>";
+		};
+		901DCB4C560095E07453A82EA8CAFA02 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				A4AAAC60950EF7DC878F2CFD91886ECA /* LICENSE */,
+				47501E33C0FD7FAD419F0F344DD79F35 /* README.md */,
+				074D74E597429C838E80D3AC57421576 /* XLLoger.podspec */,
 			);
 			name = Pod;
 			sourceTree = "<group>";
@@ -213,18 +247,12 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		B230A902C083363FCEEBAF0F2B8CDD06 /* XLLoger */ = {
+		B10AF59F05A6A15D7747D20B02E8887D /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				884BFCEFAF8254169BAC1790458BB6D9 /* XLLogerManager.h */,
-				FC0AF43EDC2A67D2CF871E9C4634B26D /* XLLogerManager.m */,
-				11DB5EF77788FCE3C62CA2DF172455D0 /* XLLogerView.h */,
-				DC213AFD0DEB6DB549C0CEE94F738345 /* XLLogerView.m */,
-				A80E046CD7708482783C7C30E88E723F /* Pod */,
-				08647329F791DFAB30E9224366C56747 /* Support Files */,
+				D53C4839A7796E438C4EA30040D29A60 /* XLLoger */,
 			);
-			name = XLLoger;
-			path = ../..;
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		CA15C2F157A7F452B8C64F6B05434D74 /* Pods-XLLogerDemo-XLLogerDemoUITests */ = {
@@ -248,22 +276,31 @@
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				3E553DBF919F65418820A6DCDD432C5F /* Development Pods */,
+				B10AF59F05A6A15D7747D20B02E8887D /* Development Pods */,
 				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
-				D7719CF47BF36F1F140ABE1C1FF06502 /* Products */,
+				6025A63668D66AF70F0EA71A167E1AA2 /* Products */,
 				A881EE09BEE8689748BFDCEA4248A50C /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		D7719CF47BF36F1F140ABE1C1FF06502 /* Products */ = {
+		D53C4839A7796E438C4EA30040D29A60 /* XLLoger */ = {
 			isa = PBXGroup;
 			children = (
-				E064E3783B02B9E01B69EB721AF88055 /* Pods_XLLogerDemo.framework */,
-				9B478572FAFC762978CF2B8D2741C6A0 /* Pods_XLLogerDemo_XLLogerDemoUITests.framework */,
-				5FA9CDAE45CA9679642D677CCCC12BE3 /* Pods_XLLogerDemoTests.framework */,
-				342CD219B053FD1843F0613916E0F916 /* XLLoger.framework */,
+				5FB1B0B32FFB561EF32CF64C40FB5279 /* clear.png */,
+				50F04D8AF1103C5DEFBC0EF9B13DE632 /* clear@2x.png */,
+				AA08B6938B5031D452E2F56C29DA99A7 /* clear@3x.png */,
+				5A9F0A271945BE7A952E8DB57B239317 /* close.png */,
+				E7CC9BCB1B9468AAE86ED352EAD4B2CB /* close@2x.png */,
+				9D0D15F5954D651EE70A3C5DA903D919 /* close@3x.png */,
+				6BEDEAD42ED580540C769513FD8613DC /* XLLogerManager.h */,
+				DAC7E35EA4A0FD931839E906B175A3D8 /* XLLogerManager.m */,
+				C7ADF81CD23C6DC95EC32397DCD5318D /* XLLogerView.h */,
+				24A00822DCCE8B98D33E965983E9C26B /* XLLogerView.m */,
+				901DCB4C560095E07453A82EA8CAFA02 /* Pod */,
+				7B84F7E43CEE8B6E0E7458031F810BAD /* Support Files */,
 			);
-			name = Products;
+			name = XLLoger;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		EA389A5625184A4E87BDA4C0CB0AC562 /* Pods-XLLogerDemo */ = {
@@ -286,13 +323,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		70A522EA3F84A77CE80535C53C397AA2 /* Headers */ = {
+		7D0CC1417DE660E886D2C52060B153F2 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C492125E98CF53EE25837550A21B85E /* XLLoger-umbrella.h in Headers */,
-				B43C4381E7B5C5377CCA849394B8E009 /* XLLogerManager.h in Headers */,
-				5237342C611D9BFB806CC506D0E25A03 /* XLLogerView.h in Headers */,
+				117211DEE6B8E4026469877EBA1B867A /* XLLoger-umbrella.h in Headers */,
+				42B32E6988461C462857B367DE2B6508 /* XLLogerManager.h in Headers */,
+				3CE96E1FA4107E8D4ADB2EF46E4E9AE6 /* XLLogerView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,21 +362,39 @@
 /* Begin PBXNativeTarget section */
 		01ADD26729B200E6F1E658B880FC27C2 /* XLLoger */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9DD4D18356DF36C092943F9C095B27B4 /* Build configuration list for PBXNativeTarget "XLLoger" */;
+			buildConfigurationList = F812B0706A509F659DE3FF0F581F5135 /* Build configuration list for PBXNativeTarget "XLLoger" */;
 			buildPhases = (
-				70A522EA3F84A77CE80535C53C397AA2 /* Headers */,
-				77C9EEEEDCAE6D7A64FD787B1845EBAC /* Sources */,
-				C5B4D4163130FBDE67FE10D980FCFC57 /* Frameworks */,
-				E6003832C6E40C0CB4A40B0F9D1DF35A /* Resources */,
+				7D0CC1417DE660E886D2C52060B153F2 /* Headers */,
+				D31B38758C41B4A5976D6EA3204C656D /* Sources */,
+				9583ED3DD474DD5181CF3CB1AF43E6CD /* Frameworks */,
+				D9E8E84276B899FA468E7EF47B517B90 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				2F9ED3F95E8E96AAC327504091F9E419 /* PBXTargetDependency */,
 			);
 			name = XLLoger;
 			productName = XLLoger;
 			productReference = 342CD219B053FD1843F0613916E0F916 /* XLLoger.framework */;
 			productType = "com.apple.product-type.framework";
+		};
+		082F1019C71BF25FDD6D4FA7FD41B141 /* XLLoger-XLLoger */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD93500C784D98027D5EE29D173C957D /* Build configuration list for PBXNativeTarget "XLLoger-XLLoger" */;
+			buildPhases = (
+				EAD447DE36D73AB56F81FCFFB7A1596D /* Sources */,
+				1B89BFD023C14BF521C8D3AB76E5C07A /* Frameworks */,
+				E1478C48C58FE11760C96801611AD91B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "XLLoger-XLLoger";
+			productName = "XLLoger-XLLoger";
+			productReference = 95DCA7C7653D9A59436593452F339371 /* XLLoger.bundle */;
+			productType = "com.apple.product-type.bundle";
 		};
 		1288E7F95DBC6DED052671569DCE1A88 /* Pods-XLLogerDemoTests */ = {
 			isa = PBXNativeTarget;
@@ -353,7 +408,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				1D438EE226F2BCD8E5E0B3495DD26ED4 /* PBXTargetDependency */,
+				728929665AD887E60456B6C9B26D3025 /* PBXTargetDependency */,
 			);
 			name = "Pods-XLLogerDemoTests";
 			productName = "Pods-XLLogerDemoTests";
@@ -372,7 +427,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				1ECD7B8A0C7D0AD39638756CBEFD2BBB /* PBXTargetDependency */,
+				53984A90D2AF7521CCF4F4A4F7E6D7A3 /* PBXTargetDependency */,
 			);
 			name = "Pods-XLLogerDemo-XLLogerDemoUITests";
 			productName = "Pods-XLLogerDemo-XLLogerDemoUITests";
@@ -391,7 +446,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				6A2B8C7E68024B526C43ADD78807E3D8 /* PBXTargetDependency */,
+				87373D05CA3E8B8D8F1E336290E5337A /* PBXTargetDependency */,
 			);
 			name = "Pods-XLLogerDemo";
 			productName = "Pods-XLLogerDemo";
@@ -416,7 +471,7 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = D7719CF47BF36F1F140ABE1C1FF06502 /* Products */;
+			productRefGroup = 6025A63668D66AF70F0EA71A167E1AA2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -424,6 +479,7 @@
 				301D3807C1B4061B18C0B86DDECA1966 /* Pods-XLLogerDemo-XLLogerDemoUITests */,
 				1288E7F95DBC6DED052671569DCE1A88 /* Pods-XLLogerDemoTests */,
 				01ADD26729B200E6F1E658B880FC27C2 /* XLLoger */,
+				082F1019C71BF25FDD6D4FA7FD41B141 /* XLLoger-XLLoger */,
 			);
 		};
 /* End PBXProject section */
@@ -450,10 +506,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E6003832C6E40C0CB4A40B0F9D1DF35A /* Resources */ = {
+		D9E8E84276B899FA468E7EF47B517B90 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EDBD36306C02B68AB5CCCC4DDDC71AC /* XLLoger.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1478C48C58FE11760C96801611AD91B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				473279EAE27C81520889DA92E4B7E77E /* clear.png in Resources */,
+				CAD7BCD71B5F6E3608E67C1D9A4E848F /* clear@2x.png in Resources */,
+				F666E9AFA57480F0B673ABCECE4FFEA0 /* clear@3x.png in Resources */,
+				A8275A987744BAA760EBC0FDAD30637C /* close.png in Resources */,
+				957B57CE18EF3F1866664DBDF201BB63 /* close@2x.png in Resources */,
+				1D33FC763544766D7FA6684BB7A1EFE0 /* close@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,16 +546,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		77C9EEEEDCAE6D7A64FD787B1845EBAC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5E6D13EE7DABC4C85884ADB3B1F19EBA /* XLLoger-dummy.m in Sources */,
-				5CB94CFACEB884500BFC2CDAB44C0BBB /* XLLogerManager.m in Sources */,
-				FF102D30D28A11E6882B39FC1851BF8C /* XLLogerView.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		8CB79F29B8D10E4BFA8091023EB31909 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -494,30 +554,120 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D31B38758C41B4A5976D6EA3204C656D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0C97ACFDFC5EC042EE91476581956A4 /* XLLoger-dummy.m in Sources */,
+				28530B0319038AA30AD744CDBF26D655 /* XLLogerManager.m in Sources */,
+				55344AD657C15B5FFC6D8BA98A713BD1 /* XLLogerView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAD447DE36D73AB56F81FCFFB7A1596D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		1D438EE226F2BCD8E5E0B3495DD26ED4 /* PBXTargetDependency */ = {
+		2F9ED3F95E8E96AAC327504091F9E419 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "XLLoger-XLLoger";
+			target = 082F1019C71BF25FDD6D4FA7FD41B141 /* XLLoger-XLLoger */;
+			targetProxy = 6E99B761E32A3A27C8C89C1D899B53F1 /* PBXContainerItemProxy */;
+		};
+		53984A90D2AF7521CCF4F4A4F7E6D7A3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = XLLoger;
+			target = 01ADD26729B200E6F1E658B880FC27C2 /* XLLoger */;
+			targetProxy = 983452F5C51371606E5AB2703CAF3595 /* PBXContainerItemProxy */;
+		};
+		728929665AD887E60456B6C9B26D3025 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-XLLogerDemo";
 			target = 4A27C5FE16FEA073123BF98907C61D26 /* Pods-XLLogerDemo */;
-			targetProxy = F9200A7DD4266377F3AD5A8AD1F2F32A /* PBXContainerItemProxy */;
+			targetProxy = D24760DA3D40F84F56493816BB7F574E /* PBXContainerItemProxy */;
 		};
-		1ECD7B8A0C7D0AD39638756CBEFD2BBB /* PBXTargetDependency */ = {
+		87373D05CA3E8B8D8F1E336290E5337A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = XLLoger;
 			target = 01ADD26729B200E6F1E658B880FC27C2 /* XLLoger */;
-			targetProxy = 91230A01DA2C78F88847D1CA8FEB2DBE /* PBXContainerItemProxy */;
-		};
-		6A2B8C7E68024B526C43ADD78807E3D8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = XLLoger;
-			target = 01ADD26729B200E6F1E658B880FC27C2 /* XLLoger */;
-			targetProxy = 82722A108F6126EC412BAF95D9585F01 /* PBXContainerItemProxy */;
+			targetProxy = 2ADB6434E8AEE90E43DE01C4DF790FF3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		29537CA92A65845C3DD95E0846852687 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E13A28C30D74541C8995F3396B3FF1E /* XLLoger.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/XLLoger/XLLoger-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/XLLoger/XLLoger-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/XLLoger/XLLoger.modulemap";
+				PRODUCT_MODULE_NAME = XLLoger;
+				PRODUCT_NAME = XLLoger;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		35504ED1F23789EAEC9B8AEBBF6D1572 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BEB99DC1C579B285F350326A4180BC96 /* XLLoger.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/XLLoger/XLLoger-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/XLLoger/XLLoger-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/XLLoger/XLLoger.modulemap";
+				PRODUCT_MODULE_NAME = XLLoger;
+				PRODUCT_NAME = XLLoger;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		3932C28D24ABA706FCB9134B57ACBE4A /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 135F2B6DE05D58A87C4B2654AEE9D3CA /* Pods-XLLogerDemo-XLLogerDemoUITests.release.xcconfig */;
@@ -593,39 +743,6 @@
 			};
 			name = Debug;
 		};
-		9DAC97170BDE216F795DFA54C3F5E4E9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7E535657212914BE32057AF08AA97EE9 /* XLLoger.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/XLLoger/XLLoger-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/XLLoger/XLLoger-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/XLLoger/XLLoger.modulemap";
-				PRODUCT_MODULE_NAME = XLLoger;
-				PRODUCT_NAME = XLLoger;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		B3958F259BA54947FC8B10483E58F715 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A975BB03897DA6D1C31C7EC605E095E3 /* Pods-XLLogerDemo.release.xcconfig */;
@@ -663,6 +780,22 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		B3F2C57EBE8EBA17488BFA49970CECCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BEB99DC1C579B285F350326A4180BC96 /* XLLoger.debug.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/XLLoger";
+				IBSC_MODULE = XLLoger;
+				INFOPLIST_FILE = "Target Support Files/XLLoger/ResourceBundle-XLLoger-XLLoger-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = XLLoger;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
 		};
 		BC01E0B73776AF6B58DC318A9BE988D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -866,6 +999,22 @@
 			};
 			name = Release;
 		};
+		D95A4CBFA465BDEC697015A3520F67A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E13A28C30D74541C8995F3396B3FF1E /* XLLoger.release.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/XLLoger";
+				IBSC_MODULE = XLLoger;
+				INFOPLIST_FILE = "Target Support Files/XLLoger/ResourceBundle-XLLoger-XLLoger-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = XLLoger;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
 		E0EE63499B30F8C04F5465D3815EBA78 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 46BBCAB9370414BF191198280EF6CB72 /* Pods-XLLogerDemoTests.release.xcconfig */;
@@ -897,40 +1046,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		F17A4719B97603C74090312021C1BF28 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 38419B081CF971621DABEA956300AEA5 /* XLLoger.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/XLLoger/XLLoger-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/XLLoger/XLLoger-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/XLLoger/XLLoger.modulemap";
-				PRODUCT_MODULE_NAME = XLLoger;
-				PRODUCT_NAME = XLLoger;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -977,11 +1092,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9DD4D18356DF36C092943F9C095B27B4 /* Build configuration list for PBXNativeTarget "XLLoger" */ = {
+		AD93500C784D98027D5EE29D173C957D /* Build configuration list for PBXNativeTarget "XLLoger-XLLoger" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9DAC97170BDE216F795DFA54C3F5E4E9 /* Debug */,
-				F17A4719B97603C74090312021C1BF28 /* Release */,
+				B3F2C57EBE8EBA17488BFA49970CECCB /* Debug */,
+				D95A4CBFA465BDEC697015A3520F67A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F812B0706A509F659DE3FF0F581F5135 /* Build configuration list for PBXNativeTarget "XLLoger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35504ED1F23789EAEC9B8AEBBF6D1572 /* Debug */,
+				29537CA92A65845C3DD95E0846852687 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
