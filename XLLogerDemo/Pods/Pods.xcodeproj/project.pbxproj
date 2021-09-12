@@ -1,0 +1,992 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0152E345911F2066826B2CE3B0A81B23 /* Pods-XLLogerDemo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 21380BBB24316EF757E0B1B677D6D742 /* Pods-XLLogerDemo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1C492125E98CF53EE25837550A21B85E /* XLLoger-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F8DABA355B35DE9972160BCCF24D74FC /* XLLoger-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		236120AF99A0B903A80BD8D4945CD67B /* Pods-XLLogerDemo-XLLogerDemoUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E953853AE015AEB9B83C6260B47658 /* Pods-XLLogerDemo-XLLogerDemoUITests-dummy.m */; };
+		38C3C922B4107C59A6FFCE3C1BB339E4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
+		4965C7AC33F2D9A4E2083CCD6E85F562 /* Pods-XLLogerDemo-XLLogerDemoUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C635C8BC6BB41DA64052896C97D51739 /* Pods-XLLogerDemo-XLLogerDemoUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4CE7ABA84226B0DFFED94B3F4D53857C /* Pods-XLLogerDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F29A3A137FCCE550985C010B8B55175D /* Pods-XLLogerDemo-dummy.m */; };
+		5237342C611D9BFB806CC506D0E25A03 /* XLLogerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 11DB5EF77788FCE3C62CA2DF172455D0 /* XLLogerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5CB94CFACEB884500BFC2CDAB44C0BBB /* XLLogerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FC0AF43EDC2A67D2CF871E9C4634B26D /* XLLogerManager.m */; };
+		5E6D13EE7DABC4C85884ADB3B1F19EBA /* XLLoger-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C7578FD620D95B5C9BBC2D678CB3F4E /* XLLoger-dummy.m */; };
+		6569E86B2824F832BFE2C78F2AFD77E4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
+		89D01539527810971A4C23AF495107F4 /* Pods-XLLogerDemoTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C4FC1D553A56691678FB7AC1F6DA619C /* Pods-XLLogerDemoTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AD2F27053783278B0B1E02F525543EB2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
+		B2A6A26C2C6A8F1B8BF030E1D24BDFC5 /* Pods-XLLogerDemoTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6036912CB63A167782F17ED3239A20CB /* Pods-XLLogerDemoTests-dummy.m */; };
+		B43C4381E7B5C5377CCA849394B8E009 /* XLLogerManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 884BFCEFAF8254169BAC1790458BB6D9 /* XLLogerManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B5CBC199B12A1AA9587337524E71F6AA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
+		CBC53AB642D277EA2BC4380ED7B58350 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */; };
+		FF102D30D28A11E6882B39FC1851BF8C /* XLLogerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC213AFD0DEB6DB549C0CEE94F738345 /* XLLogerView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		82722A108F6126EC412BAF95D9585F01 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 01ADD26729B200E6F1E658B880FC27C2;
+			remoteInfo = XLLoger;
+		};
+		91230A01DA2C78F88847D1CA8FEB2DBE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 01ADD26729B200E6F1E658B880FC27C2;
+			remoteInfo = XLLoger;
+		};
+		F9200A7DD4266377F3AD5A8AD1F2F32A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4A27C5FE16FEA073123BF98907C61D26;
+			remoteInfo = "Pods-XLLogerDemo";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0113E392CAA5CB202A7D1F472D35BF4F /* Pods-XLLogerDemo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-XLLogerDemo.modulemap"; sourceTree = "<group>"; };
+		11DB5EF77788FCE3C62CA2DF172455D0 /* XLLogerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XLLogerView.h; path = XLLoger/XLLogerView.h; sourceTree = "<group>"; };
+		135F2B6DE05D58A87C4B2654AEE9D3CA /* Pods-XLLogerDemo-XLLogerDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XLLogerDemo-XLLogerDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		21380BBB24316EF757E0B1B677D6D742 /* Pods-XLLogerDemo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-XLLogerDemo-umbrella.h"; sourceTree = "<group>"; };
+		342CD219B053FD1843F0613916E0F916 /* XLLoger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = XLLoger.framework; path = XLLoger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		38419B081CF971621DABEA956300AEA5 /* XLLoger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = XLLoger.release.xcconfig; sourceTree = "<group>"; };
+		46BBCAB9370414BF191198280EF6CB72 /* Pods-XLLogerDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XLLogerDemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		54B7D69287C08A4C2460BEC3ABB8E379 /* Pods-XLLogerDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XLLogerDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		5ACB430C4CA4B2639A97400F4B85457E /* Pods-XLLogerDemoTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-XLLogerDemoTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		5D6B4FF0F1BF2F427F72E8F1804749EB /* Pods-XLLogerDemoTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-XLLogerDemoTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		5E0B30CB312765B1CF9A419B0DE68941 /* Pods-XLLogerDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-XLLogerDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		5FA9CDAE45CA9679642D677CCCC12BE3 /* Pods_XLLogerDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_XLLogerDemoTests.framework; path = "Pods-XLLogerDemoTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6036912CB63A167782F17ED3239A20CB /* Pods-XLLogerDemoTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-XLLogerDemoTests-dummy.m"; sourceTree = "<group>"; };
+		68E953853AE015AEB9B83C6260B47658 /* Pods-XLLogerDemo-XLLogerDemoUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-XLLogerDemo-XLLogerDemoUITests-dummy.m"; sourceTree = "<group>"; };
+		7E535657212914BE32057AF08AA97EE9 /* XLLoger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = XLLoger.debug.xcconfig; sourceTree = "<group>"; };
+		884BFCEFAF8254169BAC1790458BB6D9 /* XLLogerManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XLLogerManager.h; path = XLLoger/XLLogerManager.h; sourceTree = "<group>"; };
+		8C7578FD620D95B5C9BBC2D678CB3F4E /* XLLoger-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "XLLoger-dummy.m"; sourceTree = "<group>"; };
+		8F2298C6B80FF5C9884B0352F0128662 /* Pods-XLLogerDemo-XLLogerDemoUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-XLLogerDemo-XLLogerDemoUITests-frameworks.sh"; sourceTree = "<group>"; };
+		97832D51266FCD5E43E66C0D60648A93 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		991193328C35E91406E1F8EFDAE7B5AC /* Pods-XLLogerDemoTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-XLLogerDemoTests-Info.plist"; sourceTree = "<group>"; };
+		9B478572FAFC762978CF2B8D2741C6A0 /* Pods_XLLogerDemo_XLLogerDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_XLLogerDemo_XLLogerDemoUITests.framework; path = "Pods-XLLogerDemo-XLLogerDemoUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A975BB03897DA6D1C31C7EC605E095E3 /* Pods-XLLogerDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XLLogerDemo.release.xcconfig"; sourceTree = "<group>"; };
+		B093D02A399A96611F023BC802536D94 /* XLLoger-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "XLLoger-Info.plist"; sourceTree = "<group>"; };
+		B394535E82A717DB4183E679187E1C67 /* Pods-XLLogerDemo-XLLogerDemoUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-XLLogerDemo-XLLogerDemoUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		B3C00CDAE89E30B4DB0533A240ECA8E3 /* Pods-XLLogerDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-XLLogerDemo-acknowledgements.plist"; sourceTree = "<group>"; };
+		B74D0AB80AABCFD8D50DCE1E725E9081 /* Pods-XLLogerDemoTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-XLLogerDemoTests.modulemap"; sourceTree = "<group>"; };
+		C4FC1D553A56691678FB7AC1F6DA619C /* Pods-XLLogerDemoTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-XLLogerDemoTests-umbrella.h"; sourceTree = "<group>"; };
+		C635C8BC6BB41DA64052896C97D51739 /* Pods-XLLogerDemo-XLLogerDemoUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-XLLogerDemo-XLLogerDemoUITests-umbrella.h"; sourceTree = "<group>"; };
+		C6A54C0D5A6C1BAE12C5E9A28DD8A422 /* Pods-XLLogerDemo-XLLogerDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XLLogerDemo-XLLogerDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C8A3CFABA74CB9C80DED3CA7042AC301 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		CAE005B5E128C93F33BC6EBDF06D9107 /* Pods-XLLogerDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XLLogerDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		D2CAE8B1A404C852AFBEC67F56E17F52 /* Pods-XLLogerDemo-XLLogerDemoUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-XLLogerDemo-XLLogerDemoUITests-Info.plist"; sourceTree = "<group>"; };
+		DC213AFD0DEB6DB549C0CEE94F738345 /* XLLogerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = XLLogerView.m; path = XLLoger/XLLogerView.m; sourceTree = "<group>"; };
+		E064E3783B02B9E01B69EB721AF88055 /* Pods_XLLogerDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_XLLogerDemo.framework; path = "Pods-XLLogerDemo.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6C4E7D3E38D32DE1C49957F3322B775 /* XLLoger-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XLLoger-prefix.pch"; sourceTree = "<group>"; };
+		EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		EB92B497021278B0D04D664BE3B3EA77 /* Pods-XLLogerDemo-XLLogerDemoUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-XLLogerDemo-XLLogerDemoUITests.modulemap"; sourceTree = "<group>"; };
+		F1AF11098147F07320B1875A2DB438B6 /* XLLoger.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = XLLoger.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		F293B28CA47F2834E88EFA5780E957CF /* Pods-XLLogerDemo-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-XLLogerDemo-Info.plist"; sourceTree = "<group>"; };
+		F29A3A137FCCE550985C010B8B55175D /* Pods-XLLogerDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-XLLogerDemo-dummy.m"; sourceTree = "<group>"; };
+		F8DABA355B35DE9972160BCCF24D74FC /* XLLoger-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XLLoger-umbrella.h"; sourceTree = "<group>"; };
+		FACD9617D23C7E4FD77BF351F03149BD /* XLLoger.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = XLLoger.modulemap; sourceTree = "<group>"; };
+		FB2EA357736D25A67D30703D1C6E9A5A /* Pods-XLLogerDemo-XLLogerDemoUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-XLLogerDemo-XLLogerDemoUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		FC0AF43EDC2A67D2CF871E9C4634B26D /* XLLogerManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = XLLogerManager.m; path = XLLoger/XLLogerManager.m; sourceTree = "<group>"; };
+		FD856CE7CAFC0961E20E30276FE09F52 /* Pods-XLLogerDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-XLLogerDemo-frameworks.sh"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7A11B1DD3412B38AB456B4087376B670 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD2F27053783278B0B1E02F525543EB2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF583164A49E36B69F8086CB1E975DB3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38C3C922B4107C59A6FFCE3C1BB339E4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5B4D4163130FBDE67FE10D980FCFC57 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6569E86B2824F832BFE2C78F2AFD77E4 /* Foundation.framework in Frameworks */,
+				CBC53AB642D277EA2BC4380ED7B58350 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D189625E35FC11B0B4AA7526DC7BD8AD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5CBC199B12A1AA9587337524E71F6AA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08647329F791DFAB30E9224366C56747 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FACD9617D23C7E4FD77BF351F03149BD /* XLLoger.modulemap */,
+				8C7578FD620D95B5C9BBC2D678CB3F4E /* XLLoger-dummy.m */,
+				B093D02A399A96611F023BC802536D94 /* XLLoger-Info.plist */,
+				E6C4E7D3E38D32DE1C49957F3322B775 /* XLLoger-prefix.pch */,
+				F8DABA355B35DE9972160BCCF24D74FC /* XLLoger-umbrella.h */,
+				7E535657212914BE32057AF08AA97EE9 /* XLLoger.debug.xcconfig */,
+				38419B081CF971621DABEA956300AEA5 /* XLLoger.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "XLLogerDemo/Pods/Target Support Files/XLLoger";
+			sourceTree = "<group>";
+		};
+		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				59DA5C1F72E1D5BABC43EACBA672C3BA /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2506CD988C4DF3F4FDBCBCFC174E8ADD /* Pods-XLLogerDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				B74D0AB80AABCFD8D50DCE1E725E9081 /* Pods-XLLogerDemoTests.modulemap */,
+				5D6B4FF0F1BF2F427F72E8F1804749EB /* Pods-XLLogerDemoTests-acknowledgements.markdown */,
+				5ACB430C4CA4B2639A97400F4B85457E /* Pods-XLLogerDemoTests-acknowledgements.plist */,
+				6036912CB63A167782F17ED3239A20CB /* Pods-XLLogerDemoTests-dummy.m */,
+				991193328C35E91406E1F8EFDAE7B5AC /* Pods-XLLogerDemoTests-Info.plist */,
+				C4FC1D553A56691678FB7AC1F6DA619C /* Pods-XLLogerDemoTests-umbrella.h */,
+				CAE005B5E128C93F33BC6EBDF06D9107 /* Pods-XLLogerDemoTests.debug.xcconfig */,
+				46BBCAB9370414BF191198280EF6CB72 /* Pods-XLLogerDemoTests.release.xcconfig */,
+			);
+			name = "Pods-XLLogerDemoTests";
+			path = "Target Support Files/Pods-XLLogerDemoTests";
+			sourceTree = "<group>";
+		};
+		3E553DBF919F65418820A6DCDD432C5F /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B230A902C083363FCEEBAF0F2B8CDD06 /* XLLoger */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		59DA5C1F72E1D5BABC43EACBA672C3BA /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */,
+				D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		A80E046CD7708482783C7C30E88E723F /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				C8A3CFABA74CB9C80DED3CA7042AC301 /* LICENSE */,
+				97832D51266FCD5E43E66C0D60648A93 /* README.md */,
+				F1AF11098147F07320B1875A2DB438B6 /* XLLoger.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		A881EE09BEE8689748BFDCEA4248A50C /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				EA389A5625184A4E87BDA4C0CB0AC562 /* Pods-XLLogerDemo */,
+				CA15C2F157A7F452B8C64F6B05434D74 /* Pods-XLLogerDemo-XLLogerDemoUITests */,
+				2506CD988C4DF3F4FDBCBCFC174E8ADD /* Pods-XLLogerDemoTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		B230A902C083363FCEEBAF0F2B8CDD06 /* XLLoger */ = {
+			isa = PBXGroup;
+			children = (
+				884BFCEFAF8254169BAC1790458BB6D9 /* XLLogerManager.h */,
+				FC0AF43EDC2A67D2CF871E9C4634B26D /* XLLogerManager.m */,
+				11DB5EF77788FCE3C62CA2DF172455D0 /* XLLogerView.h */,
+				DC213AFD0DEB6DB549C0CEE94F738345 /* XLLogerView.m */,
+				A80E046CD7708482783C7C30E88E723F /* Pod */,
+				08647329F791DFAB30E9224366C56747 /* Support Files */,
+			);
+			name = XLLoger;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		CA15C2F157A7F452B8C64F6B05434D74 /* Pods-XLLogerDemo-XLLogerDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EB92B497021278B0D04D664BE3B3EA77 /* Pods-XLLogerDemo-XLLogerDemoUITests.modulemap */,
+				FB2EA357736D25A67D30703D1C6E9A5A /* Pods-XLLogerDemo-XLLogerDemoUITests-acknowledgements.markdown */,
+				B394535E82A717DB4183E679187E1C67 /* Pods-XLLogerDemo-XLLogerDemoUITests-acknowledgements.plist */,
+				68E953853AE015AEB9B83C6260B47658 /* Pods-XLLogerDemo-XLLogerDemoUITests-dummy.m */,
+				8F2298C6B80FF5C9884B0352F0128662 /* Pods-XLLogerDemo-XLLogerDemoUITests-frameworks.sh */,
+				D2CAE8B1A404C852AFBEC67F56E17F52 /* Pods-XLLogerDemo-XLLogerDemoUITests-Info.plist */,
+				C635C8BC6BB41DA64052896C97D51739 /* Pods-XLLogerDemo-XLLogerDemoUITests-umbrella.h */,
+				C6A54C0D5A6C1BAE12C5E9A28DD8A422 /* Pods-XLLogerDemo-XLLogerDemoUITests.debug.xcconfig */,
+				135F2B6DE05D58A87C4B2654AEE9D3CA /* Pods-XLLogerDemo-XLLogerDemoUITests.release.xcconfig */,
+			);
+			name = "Pods-XLLogerDemo-XLLogerDemoUITests";
+			path = "Target Support Files/Pods-XLLogerDemo-XLLogerDemoUITests";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				3E553DBF919F65418820A6DCDD432C5F /* Development Pods */,
+				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
+				D7719CF47BF36F1F140ABE1C1FF06502 /* Products */,
+				A881EE09BEE8689748BFDCEA4248A50C /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D7719CF47BF36F1F140ABE1C1FF06502 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E064E3783B02B9E01B69EB721AF88055 /* Pods_XLLogerDemo.framework */,
+				9B478572FAFC762978CF2B8D2741C6A0 /* Pods_XLLogerDemo_XLLogerDemoUITests.framework */,
+				5FA9CDAE45CA9679642D677CCCC12BE3 /* Pods_XLLogerDemoTests.framework */,
+				342CD219B053FD1843F0613916E0F916 /* XLLoger.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EA389A5625184A4E87BDA4C0CB0AC562 /* Pods-XLLogerDemo */ = {
+			isa = PBXGroup;
+			children = (
+				0113E392CAA5CB202A7D1F472D35BF4F /* Pods-XLLogerDemo.modulemap */,
+				5E0B30CB312765B1CF9A419B0DE68941 /* Pods-XLLogerDemo-acknowledgements.markdown */,
+				B3C00CDAE89E30B4DB0533A240ECA8E3 /* Pods-XLLogerDemo-acknowledgements.plist */,
+				F29A3A137FCCE550985C010B8B55175D /* Pods-XLLogerDemo-dummy.m */,
+				FD856CE7CAFC0961E20E30276FE09F52 /* Pods-XLLogerDemo-frameworks.sh */,
+				F293B28CA47F2834E88EFA5780E957CF /* Pods-XLLogerDemo-Info.plist */,
+				21380BBB24316EF757E0B1B677D6D742 /* Pods-XLLogerDemo-umbrella.h */,
+				54B7D69287C08A4C2460BEC3ABB8E379 /* Pods-XLLogerDemo.debug.xcconfig */,
+				A975BB03897DA6D1C31C7EC605E095E3 /* Pods-XLLogerDemo.release.xcconfig */,
+			);
+			name = "Pods-XLLogerDemo";
+			path = "Target Support Files/Pods-XLLogerDemo";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		70A522EA3F84A77CE80535C53C397AA2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C492125E98CF53EE25837550A21B85E /* XLLoger-umbrella.h in Headers */,
+				B43C4381E7B5C5377CCA849394B8E009 /* XLLogerManager.h in Headers */,
+				5237342C611D9BFB806CC506D0E25A03 /* XLLogerView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B931CEFD49BA889ED0AC95FD3546CF62 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4965C7AC33F2D9A4E2083CCD6E85F562 /* Pods-XLLogerDemo-XLLogerDemoUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8D021041D22613A615278A76F9EE724 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89D01539527810971A4C23AF495107F4 /* Pods-XLLogerDemoTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3AAA42DA8879B975ADB4F2C67A2EB2D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0152E345911F2066826B2CE3B0A81B23 /* Pods-XLLogerDemo-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		01ADD26729B200E6F1E658B880FC27C2 /* XLLoger */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9DD4D18356DF36C092943F9C095B27B4 /* Build configuration list for PBXNativeTarget "XLLoger" */;
+			buildPhases = (
+				70A522EA3F84A77CE80535C53C397AA2 /* Headers */,
+				77C9EEEEDCAE6D7A64FD787B1845EBAC /* Sources */,
+				C5B4D4163130FBDE67FE10D980FCFC57 /* Frameworks */,
+				E6003832C6E40C0CB4A40B0F9D1DF35A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XLLoger;
+			productName = XLLoger;
+			productReference = 342CD219B053FD1843F0613916E0F916 /* XLLoger.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		1288E7F95DBC6DED052671569DCE1A88 /* Pods-XLLogerDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 670341FCDC9D22E2F7FE81EBE4D26D7A /* Build configuration list for PBXNativeTarget "Pods-XLLogerDemoTests" */;
+			buildPhases = (
+				D8D021041D22613A615278A76F9EE724 /* Headers */,
+				194A9A8729E7549E7286EEB8741BF82F /* Sources */,
+				AF583164A49E36B69F8086CB1E975DB3 /* Frameworks */,
+				2430BEBBC3AA0C21A82D3BAF422C00F2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1D438EE226F2BCD8E5E0B3495DD26ED4 /* PBXTargetDependency */,
+			);
+			name = "Pods-XLLogerDemoTests";
+			productName = "Pods-XLLogerDemoTests";
+			productReference = 5FA9CDAE45CA9679642D677CCCC12BE3 /* Pods_XLLogerDemoTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		301D3807C1B4061B18C0B86DDECA1966 /* Pods-XLLogerDemo-XLLogerDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7DCDE83F4CF3831F4256004B02BA0B2C /* Build configuration list for PBXNativeTarget "Pods-XLLogerDemo-XLLogerDemoUITests" */;
+			buildPhases = (
+				B931CEFD49BA889ED0AC95FD3546CF62 /* Headers */,
+				8CB79F29B8D10E4BFA8091023EB31909 /* Sources */,
+				D189625E35FC11B0B4AA7526DC7BD8AD /* Frameworks */,
+				8C68DEF49BA33D1FAA1238863A0A8290 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1ECD7B8A0C7D0AD39638756CBEFD2BBB /* PBXTargetDependency */,
+			);
+			name = "Pods-XLLogerDemo-XLLogerDemoUITests";
+			productName = "Pods-XLLogerDemo-XLLogerDemoUITests";
+			productReference = 9B478572FAFC762978CF2B8D2741C6A0 /* Pods_XLLogerDemo_XLLogerDemoUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		4A27C5FE16FEA073123BF98907C61D26 /* Pods-XLLogerDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 48B5EEF76B0AE339FB169838CA41276B /* Build configuration list for PBXNativeTarget "Pods-XLLogerDemo" */;
+			buildPhases = (
+				E3AAA42DA8879B975ADB4F2C67A2EB2D /* Headers */,
+				4216EF2CC6D907DC4218A4F8E8280456 /* Sources */,
+				7A11B1DD3412B38AB456B4087376B670 /* Frameworks */,
+				3EC2A847C286D7DF41DAA96453CC0EB7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6A2B8C7E68024B526C43ADD78807E3D8 /* PBXTargetDependency */,
+			);
+			name = "Pods-XLLogerDemo";
+			productName = "Pods-XLLogerDemo";
+			productReference = E064E3783B02B9E01B69EB721AF88055 /* Pods_XLLogerDemo.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 10.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = D7719CF47BF36F1F140ABE1C1FF06502 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4A27C5FE16FEA073123BF98907C61D26 /* Pods-XLLogerDemo */,
+				301D3807C1B4061B18C0B86DDECA1966 /* Pods-XLLogerDemo-XLLogerDemoUITests */,
+				1288E7F95DBC6DED052671569DCE1A88 /* Pods-XLLogerDemoTests */,
+				01ADD26729B200E6F1E658B880FC27C2 /* XLLoger */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2430BEBBC3AA0C21A82D3BAF422C00F2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3EC2A847C286D7DF41DAA96453CC0EB7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C68DEF49BA33D1FAA1238863A0A8290 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6003832C6E40C0CB4A40B0F9D1DF35A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		194A9A8729E7549E7286EEB8741BF82F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2A6A26C2C6A8F1B8BF030E1D24BDFC5 /* Pods-XLLogerDemoTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4216EF2CC6D907DC4218A4F8E8280456 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CE7ABA84226B0DFFED94B3F4D53857C /* Pods-XLLogerDemo-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77C9EEEEDCAE6D7A64FD787B1845EBAC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E6D13EE7DABC4C85884ADB3B1F19EBA /* XLLoger-dummy.m in Sources */,
+				5CB94CFACEB884500BFC2CDAB44C0BBB /* XLLogerManager.m in Sources */,
+				FF102D30D28A11E6882B39FC1851BF8C /* XLLogerView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8CB79F29B8D10E4BFA8091023EB31909 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				236120AF99A0B903A80BD8D4945CD67B /* Pods-XLLogerDemo-XLLogerDemoUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1D438EE226F2BCD8E5E0B3495DD26ED4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-XLLogerDemo";
+			target = 4A27C5FE16FEA073123BF98907C61D26 /* Pods-XLLogerDemo */;
+			targetProxy = F9200A7DD4266377F3AD5A8AD1F2F32A /* PBXContainerItemProxy */;
+		};
+		1ECD7B8A0C7D0AD39638756CBEFD2BBB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = XLLoger;
+			target = 01ADD26729B200E6F1E658B880FC27C2 /* XLLoger */;
+			targetProxy = 91230A01DA2C78F88847D1CA8FEB2DBE /* PBXContainerItemProxy */;
+		};
+		6A2B8C7E68024B526C43ADD78807E3D8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = XLLoger;
+			target = 01ADD26729B200E6F1E658B880FC27C2 /* XLLoger */;
+			targetProxy = 82722A108F6126EC412BAF95D9585F01 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3932C28D24ABA706FCB9134B57ACBE4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 135F2B6DE05D58A87C4B2654AEE9D3CA /* Pods-XLLogerDemo-XLLogerDemoUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-XLLogerDemo-XLLogerDemoUITests/Pods-XLLogerDemo-XLLogerDemoUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-XLLogerDemo-XLLogerDemoUITests/Pods-XLLogerDemo-XLLogerDemoUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		92D90D229F12DF69CED1F6ABDFDF007E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6A54C0D5A6C1BAE12C5E9A28DD8A422 /* Pods-XLLogerDemo-XLLogerDemoUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-XLLogerDemo-XLLogerDemoUITests/Pods-XLLogerDemo-XLLogerDemoUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-XLLogerDemo-XLLogerDemoUITests/Pods-XLLogerDemo-XLLogerDemoUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9DAC97170BDE216F795DFA54C3F5E4E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E535657212914BE32057AF08AA97EE9 /* XLLoger.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/XLLoger/XLLoger-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/XLLoger/XLLoger-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/XLLoger/XLLoger.modulemap";
+				PRODUCT_MODULE_NAME = XLLoger;
+				PRODUCT_NAME = XLLoger;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B3958F259BA54947FC8B10483E58F715 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A975BB03897DA6D1C31C7EC605E095E3 /* Pods-XLLogerDemo.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-XLLogerDemo/Pods-XLLogerDemo-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-XLLogerDemo/Pods-XLLogerDemo.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		BC01E0B73776AF6B58DC318A9BE988D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		BDB836F8610F03E176AC0FAD251E8394 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 54B7D69287C08A4C2460BEC3ABB8E379 /* Pods-XLLogerDemo.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-XLLogerDemo/Pods-XLLogerDemo-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-XLLogerDemo/Pods-XLLogerDemo.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BF05F99BFB7C05C58A8AF9F73CF200DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CAE005B5E128C93F33BC6EBDF06D9107 /* Pods-XLLogerDemoTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-XLLogerDemoTests/Pods-XLLogerDemoTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-XLLogerDemoTests/Pods-XLLogerDemoTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C605C363CC9F26F9FF97DBB1D5C6E25C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		E0EE63499B30F8C04F5465D3815EBA78 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46BBCAB9370414BF191198280EF6CB72 /* Pods-XLLogerDemoTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-XLLogerDemoTests/Pods-XLLogerDemoTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-XLLogerDemoTests/Pods-XLLogerDemoTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F17A4719B97603C74090312021C1BF28 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38419B081CF971621DABEA956300AEA5 /* XLLoger.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/XLLoger/XLLoger-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/XLLoger/XLLoger-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/XLLoger/XLLoger.modulemap";
+				PRODUCT_MODULE_NAME = XLLoger;
+				PRODUCT_NAME = XLLoger;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC01E0B73776AF6B58DC318A9BE988D7 /* Debug */,
+				C605C363CC9F26F9FF97DBB1D5C6E25C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		48B5EEF76B0AE339FB169838CA41276B /* Build configuration list for PBXNativeTarget "Pods-XLLogerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDB836F8610F03E176AC0FAD251E8394 /* Debug */,
+				B3958F259BA54947FC8B10483E58F715 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		670341FCDC9D22E2F7FE81EBE4D26D7A /* Build configuration list for PBXNativeTarget "Pods-XLLogerDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF05F99BFB7C05C58A8AF9F73CF200DE /* Debug */,
+				E0EE63499B30F8C04F5465D3815EBA78 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7DCDE83F4CF3831F4256004B02BA0B2C /* Build configuration list for PBXNativeTarget "Pods-XLLogerDemo-XLLogerDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92D90D229F12DF69CED1F6ABDFDF007E /* Debug */,
+				3932C28D24ABA706FCB9134B57ACBE4A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9DD4D18356DF36C092943F9C095B27B4 /* Build configuration list for PBXNativeTarget "XLLoger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9DAC97170BDE216F795DFA54C3F5E4E9 /* Debug */,
+				F17A4719B97603C74090312021C1BF28 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
