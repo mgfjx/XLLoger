@@ -1,6 +1,6 @@
 {
   "name": "XLLoger",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "summary": "A float UI log viewer for device.",
   "description": "It will automatically obtain log information and display it in textview.",
   "homepage": "https://github.com/mgfjx/XLLoger",
@@ -17,15 +17,15 @@
   },
   "source": {
     "git": "https://github.com/mgfjx/XLLoger.git",
-    "tag": "0.0.1"
+    "tag": "0.0.2"
   },
-  "public_header_files": "XLLoger/Classes/*.h",
   "requires_arc": true,
   "frameworks": "UIKit",
   "subspecs": [
     {
       "name": "Classes",
-      "source_files": "XLLoger/Classes/**/*.{h,m}"
+      "source_files": "XLLoger/Classes/**/*.{h,m}",
+      "public_header_files": "XLLoger/Classes/*.h"
     },
     {
       "name": "Assets",
