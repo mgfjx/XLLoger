@@ -43,6 +43,10 @@ static XLLogerManager *singleton = nil;
         singleton.textSize = 12.0f;
         singleton.autoDestination = YES;
         singleton.temporaryLog = @"";
+        id enable = [[NSUserDefaults standardUserDefaults] objectForKey:kEnableKey];
+        if (!enable) {
+            [[NSUserDefaults standardUserDefaults] setBool:YES forKey:kEnableKey];
+        }
         singleton.enable = [[NSUserDefaults standardUserDefaults] boolForKey:kEnableKey];
     });
     return singleton;
