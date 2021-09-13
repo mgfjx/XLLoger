@@ -1,6 +1,0 @@
-framework module XLLoger {
-  umbrella header "XLLoger-umbrella.h"
-
-  export *
-  module * { export * }
-}

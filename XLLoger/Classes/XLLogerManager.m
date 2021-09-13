@@ -8,6 +8,8 @@
 #import "XLLogerManager.h"
 #import "XLLogerView.h"
 
+#define kEnableKey @"kEnableKey"
+
 @interface XLLogerManager ()
 
 @property (nonatomic, strong) UIWindow *window ;
@@ -41,6 +43,7 @@ static XLLogerManager *singleton = nil;
         singleton.textSize = 12.0f;
         singleton.autoDestination = YES;
         singleton.temporaryLog = @"";
+        singleton.enable = [[NSUserDefaults standardUserDefaults] boolForKey:kEnableKey];
     });
     return singleton;
 }
@@ -57,7 +60,10 @@ static XLLogerManager *singleton = nil;
     return [[self alloc] init];
 }
 
-- (void)startPrepar {
+- (void)prepare {
+    if (!self.enable) {
+        return;
+    }
     if (self.autoDestination) {
         if (!isatty(STDERR_FILENO)) {
             [self captureStandardOutput];
@@ -65,6 +71,11 @@ static XLLogerManager *singleton = nil;
     } else {
         [self captureStandardOutput];
     }
+}
+
+- (void)setEnable:(BOOL)enable {
+    [[NSUserDefaults standardUserDefaults] setBool:enable forKey:kEnableKey];
+    _enable = enable;
 }
 
 /// add XLLoger View On Root window

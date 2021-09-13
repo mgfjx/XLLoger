@@ -65,6 +65,7 @@
     [container addSubview:bottomView];
     bottomView.translatesAutoresizingMaskIntoConstraints = NO;
     self.bottomView = bottomView;
+    [self initBottomViews];
     
     UITextView *textView = [[UITextView alloc] init];
     textView.editable = NO;
@@ -166,6 +167,50 @@
         top.active = YES;
     }
     
+}
+    
+- (void)initBottomViews {
+    
+    UIButton *checkBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [checkBtn addTarget:self action:@selector(turnOff:) forControlEvents:UIControlEventTouchUpInside];
+    [checkBtn setImage:[self imageForResourcePath:@"XLLoger.bundle/radio_uncheck" ofType:@"png" inBundle:[NSBundle bundleForClass:[self class]]] forState:UIControlStateNormal];
+    [checkBtn setImage:[self imageForResourcePath:@"XLLoger.bundle/radio_checked" ofType:@"png" inBundle:[NSBundle bundleForClass:[self class]]] forState:UIControlStateSelected];
+    checkBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentFill;
+    checkBtn.contentVerticalAlignment = UIControlContentVerticalAlignmentFill;
+    [self.bottomView addSubview:checkBtn];
+    checkBtn.translatesAutoresizingMaskIntoConstraints = NO;
+    checkBtn.selected = ![XLLogerManager manager].enable;
+    
+    CGFloat offset = 3;
+    NSLayoutConstraint *top = [NSLayoutConstraint constraintWithItem:checkBtn attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.bottomView attribute:NSLayoutAttributeTop multiplier:1.0 constant:offset];
+    NSLayoutConstraint *left = [NSLayoutConstraint constraintWithItem:checkBtn attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.bottomView attribute:NSLayoutAttributeLeading multiplier:1.0 constant:offset];
+    NSLayoutConstraint *bottom = [NSLayoutConstraint constraintWithItem:checkBtn attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.bottomView attribute:NSLayoutAttributeBottom multiplier:1.0 constant:-offset];
+    NSLayoutConstraint *width = [NSLayoutConstraint constraintWithItem:checkBtn attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:checkBtn attribute:NSLayoutAttributeHeight multiplier:1.0 constant:0];
+    left.active = YES;
+    bottom.active = YES;
+    width.active = YES;
+    top.active = YES;
+    
+    {
+        UILabel *textLabel = [[UILabel alloc] init];
+        textLabel.text = @"Don't intercept logs the next starts.";
+        textLabel.font = [UIFont systemFontOfSize:10];
+        [self.bottomView addSubview:textLabel];
+        textLabel.translatesAutoresizingMaskIntoConstraints = NO;
+        
+        CGFloat offset = 3;
+        NSLayoutConstraint *centerY = [NSLayoutConstraint constraintWithItem:textLabel attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:checkBtn attribute:NSLayoutAttributeCenterY multiplier:1.0 constant:0];
+        NSLayoutConstraint *right = [NSLayoutConstraint constraintWithItem:textLabel attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.bottomView attribute:NSLayoutAttributeTrailing multiplier:1.0 constant:-offset];
+        NSLayoutConstraint *left = [NSLayoutConstraint constraintWithItem:textLabel attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:checkBtn attribute:NSLayoutAttributeTrailing multiplier:1.0 constant:5];
+        right.active = YES;
+        left.active = YES;
+        centerY.active = YES;
+    }
+}
+
+- (void)turnOff:(UIButton *)sender {
+    sender.selected = !sender.selected;
+    [XLLogerManager manager].enable = !sender.selected;
 }
 
 #pragma mark - event func

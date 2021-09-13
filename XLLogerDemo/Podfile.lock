@@ -1,5 +1,9 @@
 PODS:
-  - XLLoger (0.0.1)
+  - XLLoger (0.0.2):
+    - XLLoger/Assets (= 0.0.2)
+    - XLLoger/Classes (= 0.0.2)
+  - XLLoger/Assets (0.0.2)
+  - XLLoger/Classes (0.0.2)
 
 DEPENDENCIES:
   - XLLoger (from `../`)
@@ -9,8 +13,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  XLLoger: 8edcb7616482c92b7bf9fee7ae5e81c716b7a225
+  XLLoger: 8dcf968883a231faf8aa2584d4264abea7fd5677
 
-PODFILE CHECKSUM: 4e3fe09689cd022d6b31f25496582c8e78467ba5
+PODFILE CHECKSUM: 1ad06706d9e3cd40584d6305d2eca2aa223b474d
 
-COCOAPODS: 1.10.0
+COCOAPODS: 1.11.0
