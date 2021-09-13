@@ -15,6 +15,7 @@ Pod::Spec.new do |spec|
   # spec.source_files  = 'XLLoger/Classes/**/*.{h,m}'
   spec.subspec 'Classes' do |classes|
     classes.source_files = 'XLLoger/Classes/**/*.{h,m}'
+    classes.public_header_files = 'XLLoger/Classes/*.h'
   end
 
   spec.subspec 'Assets' do |imgs|
@@ -26,7 +27,6 @@ Pod::Spec.new do |spec|
   # spec.resource_bundles = {
   #   'XLLoger' => ['XLLoger/Assets/*.png']
   # }
-  spec.public_header_files = 'XLLoger/Classes/*.h'
   spec.requires_arc = true
   spec.framework    = "UIKit"
 
