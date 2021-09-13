@@ -41,7 +41,7 @@ static XLLogerManager *singleton = nil;
         singleton = [super init];
         singleton.textColor = [UIColor whiteColor];
         singleton.textSize = 12.0f;
-        singleton.autoDestination = YES;
+        singleton.autoDestination = NO;
         singleton.temporaryLog = @"";
         id enable = [[NSUserDefaults standardUserDefaults] objectForKey:kEnableKey];
         if (!enable) {
