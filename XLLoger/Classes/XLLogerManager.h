@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, assign) BOOL enable ;
 
-/// If YES,  the app running on the device by xcode or on simulator will use xcode console. Default YES
+/// If YES,  the app running on the device by xcode or on simulator will use xcode console. Default NO
 @property (nonatomic, assign) BOOL autoDestination ;
 
 @property (nonatomic, copy) void (^outputCallback) (NSString *outPut) ;

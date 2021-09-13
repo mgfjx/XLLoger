@@ -15,7 +15,6 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [XLLogerManager manager].autoDestination = NO;
     [[XLLogerManager manager] prepare];
     NSLog(@"launch log somthing");
     return YES;
