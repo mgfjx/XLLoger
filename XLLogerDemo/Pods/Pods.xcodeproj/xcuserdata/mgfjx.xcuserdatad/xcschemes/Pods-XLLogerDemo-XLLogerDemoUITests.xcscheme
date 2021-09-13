@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1100"
+   LastUpgradeVersion = "1240"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "301D3807C1B4061B18C0B86DDECA1966"
-               BuildableName = "Pods_XLLogerDemo_XLLogerDemoUITests.framework"
+               BuildableName = "libPods-XLLogerDemo-XLLogerDemoUITests.a"
                BlueprintName = "Pods-XLLogerDemo-XLLogerDemoUITests"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>

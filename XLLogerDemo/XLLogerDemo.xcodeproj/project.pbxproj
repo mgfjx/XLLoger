@@ -16,9 +16,9 @@
 		2DCD85C326EE587F00BB3C76 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DCD85C226EE587F00BB3C76 /* main.m */; };
 		2DCD85CD26EE587F00BB3C76 /* XLLogerDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DCD85CC26EE587F00BB3C76 /* XLLogerDemoTests.m */; };
 		2DCD85D826EE587F00BB3C76 /* XLLogerDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DCD85D726EE587F00BB3C76 /* XLLogerDemoUITests.m */; };
-		3C7AB094C77EBB3B7BD5B01C /* Pods_XLLogerDemo_XLLogerDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93380C18C69B3A19F142B2C9 /* Pods_XLLogerDemo_XLLogerDemoUITests.framework */; };
-		90DEAB12288FC00904AAFF55 /* Pods_XLLogerDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6291298BEE7098695AC9175C /* Pods_XLLogerDemo.framework */; };
-		E5F46DE41470FF02E504CB3A /* Pods_XLLogerDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1D5DBB9C71C55C22E3B7E28 /* Pods_XLLogerDemoTests.framework */; };
+		95CF7DF20F7DAD50BE7C3FF2 /* libPods-XLLogerDemo-XLLogerDemoUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C48EFFCF8E14B778837A261A /* libPods-XLLogerDemo-XLLogerDemoUITests.a */; };
+		CDA83EF4317FEDA9DFF96F1F /* libPods-XLLogerDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 91F05048D9651BA5EC594E54 /* libPods-XLLogerDemoTests.a */; };
+		FC8F3CC88A9BF0A646DFB4A8 /* libPods-XLLogerDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A20671147D56646BD05F687 /* libPods-XLLogerDemo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,14 +59,14 @@
 		2DCD85D726EE587F00BB3C76 /* XLLogerDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XLLogerDemoUITests.m; sourceTree = "<group>"; };
 		2DCD85D926EE587F00BB3C76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2DCD85E526EE59D700BB3C76 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		6291298BEE7098695AC9175C /* Pods_XLLogerDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XLLogerDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A20671147D56646BD05F687 /* libPods-XLLogerDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XLLogerDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CF1D2D8C8F7BB5E01F6AE6C /* Pods-XLLogerDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XLLogerDemoTests.release.xcconfig"; path = "Target Support Files/Pods-XLLogerDemoTests/Pods-XLLogerDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		85F3348F4FEB80146C0ACDEE /* Pods-XLLogerDemo-XLLogerDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XLLogerDemo-XLLogerDemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-XLLogerDemo-XLLogerDemoUITests/Pods-XLLogerDemo-XLLogerDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		88CF33BE7683888F5AB293C6 /* Pods-XLLogerDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XLLogerDemo.release.xcconfig"; path = "Target Support Files/Pods-XLLogerDemo/Pods-XLLogerDemo.release.xcconfig"; sourceTree = "<group>"; };
-		93380C18C69B3A19F142B2C9 /* Pods_XLLogerDemo_XLLogerDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XLLogerDemo_XLLogerDemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		91F05048D9651BA5EC594E54 /* libPods-XLLogerDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XLLogerDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A20341E2896124BF9B65B4E1 /* Pods-XLLogerDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XLLogerDemo.debug.xcconfig"; path = "Target Support Files/Pods-XLLogerDemo/Pods-XLLogerDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		B1D5DBB9C71C55C22E3B7E28 /* Pods_XLLogerDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XLLogerDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB3FD0E38D888E64FF02DAFD /* Pods-XLLogerDemo-XLLogerDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XLLogerDemo-XLLogerDemoUITests.release.xcconfig"; path = "Target Support Files/Pods-XLLogerDemo-XLLogerDemoUITests/Pods-XLLogerDemo-XLLogerDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C48EFFCF8E14B778837A261A /* libPods-XLLogerDemo-XLLogerDemoUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XLLogerDemo-XLLogerDemoUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90DEAB12288FC00904AAFF55 /* Pods_XLLogerDemo.framework in Frameworks */,
+				FC8F3CC88A9BF0A646DFB4A8 /* libPods-XLLogerDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,7 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5F46DE41470FF02E504CB3A /* Pods_XLLogerDemoTests.framework in Frameworks */,
+				CDA83EF4317FEDA9DFF96F1F /* libPods-XLLogerDemoTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,7 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C7AB094C77EBB3B7BD5B01C /* Pods_XLLogerDemo_XLLogerDemoUITests.framework in Frameworks */,
+				95CF7DF20F7DAD50BE7C3FF2 /* libPods-XLLogerDemo-XLLogerDemoUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,9 +159,9 @@
 		72849D0779CF1CC7F1765C77 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6291298BEE7098695AC9175C /* Pods_XLLogerDemo.framework */,
-				93380C18C69B3A19F142B2C9 /* Pods_XLLogerDemo_XLLogerDemoUITests.framework */,
-				B1D5DBB9C71C55C22E3B7E28 /* Pods_XLLogerDemoTests.framework */,
+				6A20671147D56646BD05F687 /* libPods-XLLogerDemo.a */,
+				C48EFFCF8E14B778837A261A /* libPods-XLLogerDemo-XLLogerDemoUITests.a */,
+				91F05048D9651BA5EC594E54 /* libPods-XLLogerDemoTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -190,7 +190,7 @@
 				2DCD85A926EE587C00BB3C76 /* Sources */,
 				2DCD85AA26EE587C00BB3C76 /* Frameworks */,
 				2DCD85AB26EE587C00BB3C76 /* Resources */,
-				752BD8E379FFC2E0FEB2BFFF /* [CP] Embed Pods Frameworks */,
+				1038AB7AED8E5CA698E081C0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -228,7 +228,7 @@
 				2DCD85CF26EE587F00BB3C76 /* Sources */,
 				2DCD85D026EE587F00BB3C76 /* Frameworks */,
 				2DCD85D126EE587F00BB3C76 /* Resources */,
-				AE9D04BFC7246028F9FD8BC2 /* [CP] Embed Pods Frameworks */,
+				6925F96EEFB7C923A19C7048 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -309,6 +309,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1038AB7AED8E5CA698E081C0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-XLLogerDemo/Pods-XLLogerDemo-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-XLLogerDemo/Pods-XLLogerDemo-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-XLLogerDemo/Pods-XLLogerDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		305D716C0B5BD46CCD30027A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -331,38 +348,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		752BD8E379FFC2E0FEB2BFFF /* [CP] Embed Pods Frameworks */ = {
+		6925F96EEFB7C923A19C7048 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-XLLogerDemo/Pods-XLLogerDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-XLLogerDemo-XLLogerDemoUITests/Pods-XLLogerDemo-XLLogerDemoUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-XLLogerDemo/Pods-XLLogerDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-XLLogerDemo-XLLogerDemoUITests/Pods-XLLogerDemo-XLLogerDemoUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-XLLogerDemo/Pods-XLLogerDemo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AE9D04BFC7246028F9FD8BC2 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-XLLogerDemo-XLLogerDemoUITests/Pods-XLLogerDemo-XLLogerDemoUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-XLLogerDemo-XLLogerDemoUITests/Pods-XLLogerDemo-XLLogerDemoUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-XLLogerDemo-XLLogerDemoUITests/Pods-XLLogerDemo-XLLogerDemoUITests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-XLLogerDemo-XLLogerDemoUITests/Pods-XLLogerDemo-XLLogerDemoUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FA74E48FA4E32D78D890713D /* [CP] Check Pods Manifest.lock */ = {

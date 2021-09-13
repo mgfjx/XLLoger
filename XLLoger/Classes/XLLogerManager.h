@@ -13,7 +13,11 @@ NS_ASSUME_NONNULL_BEGIN
 @interface XLLogerManager : NSObject
 
 + (instancetype)manager ;
-- (void)startPrepar ;
+
+/// call at didFinishLaunchingWithOptions
+- (void)prepare ;
+
+@property (nonatomic, assign) BOOL enable ;
 
 /// If YES,  the app running on the device by xcode or on simulator will use xcode console. Default YES
 @property (nonatomic, assign) BOOL autoDestination ;
