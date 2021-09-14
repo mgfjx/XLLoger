@@ -70,10 +70,12 @@ static XLLogerManager *singleton = nil;
     }
     if (self.autoDestination) {
         if (!isatty(STDERR_FILENO)) {
-            [self captureStandardOutput];
+            [self captureStandardOutput:STDOUT_FILENO];
+            [self captureStandardOutput:STDERR_FILENO];
         }
     } else {
-        [self captureStandardOutput];
+        [self captureStandardOutput:STDOUT_FILENO];
+        [self captureStandardOutput:STDERR_FILENO];
     }
 }
 
@@ -125,11 +127,11 @@ static XLLogerManager *singleton = nil;
     };
 }
 
-- (void)captureStandardOutput {
-    self.outputPipe = [NSPipe pipe];
-    dup2(self.outputPipe.fileHandleForWriting.fileDescriptor, STDERR_FILENO);
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(redirectNotificationHandle:) name:NSFileHandleReadCompletionNotification object:self.outputPipe.fileHandleForReading]; // register notification
-    [self.outputPipe.fileHandleForReading readInBackgroundAndNotify];
+- (void)captureStandardOutput:(int)fd {
+    NSPipe *pipe = [NSPipe pipe];
+    dup2(pipe.fileHandleForWriting.fileDescriptor, fd);
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(redirectNotificationHandle:) name:NSFileHandleReadCompletionNotification object:pipe.fileHandleForReading]; // register notification
+    [pipe.fileHandleForReading readInBackgroundAndNotify];
     
 }
 
