@@ -27,13 +27,25 @@
                                     <action selector="logSomething:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g2q-fh-fjd"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wMh-Lm-gDx">
+                                <rect key="frame" x="20" y="762" width="374" height="40"/>
+                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Recover"/>
+                                <connections>
+                                    <action selector="recover:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pBT-5a-Mfw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="wMh-Lm-gDx" firstAttribute="leading" secondItem="3io-TG-ybA" secondAttribute="leading" id="4Hg-MS-29b"/>
+                            <constraint firstItem="3io-TG-ybA" firstAttribute="top" secondItem="wMh-Lm-gDx" secondAttribute="bottom" constant="20" id="J92-HC-4LF"/>
+                            <constraint firstItem="wMh-Lm-gDx" firstAttribute="trailing" secondItem="3io-TG-ybA" secondAttribute="trailing" id="OKN-He-a7m"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3io-TG-ybA" secondAttribute="bottom" id="cVy-8s-H4g"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3io-TG-ybA" secondAttribute="trailing" constant="20" id="oNS-rE-qEU"/>
                             <constraint firstItem="3io-TG-ybA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="qy6-17-b7W"/>
+                            <constraint firstItem="wMh-Lm-gDx" firstAttribute="height" secondItem="3io-TG-ybA" secondAttribute="height" id="zB6-fK-iJd"/>
                         </constraints>
                     </view>
                 </viewController>

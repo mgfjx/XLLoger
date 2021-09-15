@@ -29,4 +29,10 @@
     
 }
 
+- (IBAction)recover:(UIButton *)sender {
+    
+    printf("hahaha");
+    
+}
+
 @end

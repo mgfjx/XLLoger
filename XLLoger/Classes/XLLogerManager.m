@@ -16,6 +16,9 @@
 @property (nonatomic, strong) XLLogerView *logView ;
 @property (nonatomic, strong) NSPipe *outputPipe ;
 
+@property (nonatomic, strong) dispatch_source_t source_t ;
+@property (nonatomic, strong) dispatch_source_t source_t2 ;
+
 /// temporary log if logView don't create
 @property (nonatomic, strong) NSString *temporaryLog ;
 
@@ -65,9 +68,14 @@ static XLLogerManager *singleton = nil;
 }
 
 - (void)prepare {
+    self.source_t = [self _startCapturingWritingToFD:STDOUT_FILENO];
+    self.source_t2 = [self _startCapturingWritingToFD:STDERR_FILENO];
     if (!self.enable) {
         return;
     }
+    return;
+    int dupValue = dup(STDERR_FILENO);
+    [[NSUserDefaults standardUserDefaults] setInteger:dupValue forKey:@"dup"];
     if (self.autoDestination) {
         if (!isatty(STDERR_FILENO)) {
             [self captureStandardOutput:STDOUT_FILENO];
@@ -82,6 +90,13 @@ static XLLogerManager *singleton = nil;
 - (void)setEnable:(BOOL)enable {
     [[NSUserDefaults standardUserDefaults] setBool:enable forKey:kEnableKey];
     _enable = enable;
+    if (enable) {
+        [self prepare];
+    } else {
+        int dupValue = (int)[[NSUserDefaults standardUserDefaults] integerForKey:@"dup"];
+        dup2(dupValue, STDERR_FILENO);
+        dup2(dupValue, STDOUT_FILENO);
+    }
 }
 
 /// add XLLoger View On Root window
@@ -138,6 +153,10 @@ static XLLogerManager *singleton = nil;
 - (void)redirectNotificationHandle:(NSNotification *)nf {
     NSData *data = [[nf userInfo] objectForKey:NSFileHandleNotificationDataItem];
     NSString *str = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    if (str.length == 0) {
+        [[nf object] readInBackgroundAndNotify];
+        return;
+    }
     if (self.outputCallback) {
         self.outputCallback(str);
     } else {
@@ -145,5 +164,53 @@ static XLLogerManager *singleton = nil;
     }
     [[nf object] readInBackgroundAndNotify];
 }
+
+- (dispatch_source_t)_startCapturingWritingToFD:(int)fd  {
+
+    int fildes[2];
+    pipe(fildes);  // [0] is read end of pipe while [1] is write end
+    dup2(fildes[1], fd);  // Duplicate write end of pipe "onto" fd (this closes fd)
+    close(fildes[1]);  // Close original write end of pipe
+    fd = fildes[0];  // We can now monitor the read end of the pipe
+
+    char* buffer = malloc(1024);
+    NSMutableData* data = [[NSMutableData alloc] init];
+    fcntl(fd, F_SETFL, O_NONBLOCK);
+    dispatch_source_t source = dispatch_source_create(DISPATCH_SOURCE_TYPE_READ, fd, 0, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0));
+    dispatch_source_set_cancel_handler(source, ^{
+        free(buffer);
+    });
+    dispatch_source_set_event_handler(source, ^{
+        @autoreleasepool {
+
+            while (1) {
+                ssize_t size = read(fd, buffer, 1024);
+                if (size <= 0) {
+                    break;
+                }
+                NSMutableData* data = [[NSMutableData alloc] init];
+                [data appendBytes:buffer length:size];
+                NSString *str = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+                NSString *thead = [[NSString alloc] initWithFormat:@"%@", [NSThread currentThread]];
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    if (self.outputCallback) {
+                        self.outputCallback(str);
+                    }
+                });
+                if (size < 1024) {
+                    break;
+                }
+            }
+            NSString *aString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+            //printf("aString = %s",[aString UTF8String]);
+            //NSLog(@"aString = %@",aString);
+            //读到了日志,可以进行我们需要的各种操`作了
+
+        }
+    });
+    dispatch_resume(source);
+    return source;
+}
+
 
 @end
