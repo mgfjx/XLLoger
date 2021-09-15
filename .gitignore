@@ -3,3 +3,4 @@
 /XLLogerDemo/Pods/
 *.xcodeproj/xcuserdata
 Podfile.lock
+/XLLogerDemo/XLLogerDemo.xcodeproj/xcuserdata
