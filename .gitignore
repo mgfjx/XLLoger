@@ -1,3 +1,5 @@
 *.xcuserdatad
 */xcuserdata
 /XLLogerDemo/Pods/
+*.xcodeproj/xcuserdata
+Podfile.lock
