@@ -7,12 +7,14 @@
 
 #import "XLLogerManager.h"
 #import "XLLogerView.h"
+#import "XLWindow.h"
 
 #define kEnableKey @"kEnableKey"
 
-@interface XLLogerManager ()
+@interface XLLogerManager ()<FLEXWindowEventDelegate>
 
-@property (nonatomic, strong) UIWindow *window ;
+@property (nonatomic, strong) UIViewController *explorerViewController ;
+@property (nonatomic, strong) XLWindow *window ;
 @property (nonatomic, strong) XLLogerView *logView ;
 
 @property (nonatomic, assign) int outDupValue ;
@@ -104,6 +106,27 @@ static XLLogerManager *singleton = nil;
     }
 }
 
+- (XLWindow *)window {
+    NSAssert(NSThread.isMainThread, @"You must use %@ from the main thread only.", NSStringFromClass([self class]));
+    
+    if (!_window) {
+        _window = [[XLWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+        _window.eventDelegate = self;
+        _window.backgroundColor = [UIColor clearColor];
+//        _window.rootViewController = self.explorerViewController;
+    }
+    
+    return _window;
+}
+
+- (UIViewController *)explorerViewController {
+    if (!_explorerViewController) {
+        _explorerViewController = [UIViewController new];
+    }
+
+    return _explorerViewController;
+}
+
 /// add XLLoger View On Root window
 - (void)showOnWindow {
     
@@ -111,24 +134,32 @@ static XLLogerManager *singleton = nil;
         return;
     }
     
-    UIWindow *window ;
+//    UIWindow *window ;
+//    if (@available(iOS 13.0, *)) {
+//        NSSet *sets = [[UIApplication sharedApplication] connectedScenes];
+//        for (UIScene *scene in sets) {
+//            if (scene.activationState == UISceneActivationStateForegroundActive) {
+//
+//            }
+//        }
+//        UIScene *scene = sets.anyObject;
+//        UIWindowScene *windowScene = (UIWindowScene *)scene;
+//        window = windowScene.windows.firstObject;
+//    } else {
+//        window = [UIApplication sharedApplication].keyWindow;
+//    }
+//    if (!window) {
+//        return;
+//    }
+    UIWindow *flex = self.window;
+    flex.hidden = NO;
     if (@available(iOS 13.0, *)) {
-        NSSet *sets = [[UIApplication sharedApplication] connectedScenes];
-        for (UIScene *scene in sets) {
-            if (scene.activationState == UISceneActivationStateForegroundActive) {
-                
-            }
+        // Only look for a new scene if we don't have one
+        if (!flex.windowScene) {
+            flex.windowScene = XLLogerManager.appKeyWindow.windowScene;
         }
-        UIScene *scene = sets.anyObject;
-        UIWindowScene *windowScene = (UIWindowScene *)scene;
-        window = windowScene.windows.firstObject;
-    } else {
-        window = [UIApplication sharedApplication].keyWindow;
     }
-    if (!window) {
-        return;
-    }
-    [self showOnView:window];
+    [self showOnView:self.window];
 }
 
 - (void)showOnView:(UIView *)superView {
@@ -188,5 +219,39 @@ static XLLogerManager *singleton = nil;
     return source;
 }
 
++ (UIWindow *)appKeyWindow {
+    // First, check UIApplication.keyWindow
+    XLWindow *window = (id)UIApplication.sharedApplication.keyWindow;
+    if (window) {
+        if ([window isKindOfClass:[XLWindow class]]) {
+            return window.previousKeyWindow;
+        }
+        
+        return window;
+    }
+    
+    // As of iOS 13, UIApplication.keyWindow does not return nil,
+    // so this is more of a safeguard against it returning nil in the future.
+    //
+    // Also, these are obviously not all FLEXWindows; FLEXWindow is used
+    // so we can call window.previousKeyWindow without an ugly cast
+    for (XLWindow *window in UIApplication.sharedApplication.windows) {
+        if (window.isKeyWindow) {
+            if ([window isKindOfClass:[XLWindow class]]) {
+                return window.previousKeyWindow;
+            }
+            
+            return window;
+        }
+    }
+    
+    return nil;
+}
+
+#pragma mark - FLEXWindowEventDelegate
+- (BOOL)shouldHandleTouchAtPoint:(CGPoint)pointInWindow {
+    // Ask the explorer view controller
+    return [self.logView shouldReceiveTouchAtWindowPoint:pointInWindow];
+}
 
 @end

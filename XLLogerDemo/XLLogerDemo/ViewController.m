@@ -30,9 +30,7 @@
 }
 
 - (IBAction)recover:(UIButton *)sender {
-    
     printf("hahaha");
-    
 }
 
 - (IBAction)popController:(UIButton *)sender {
