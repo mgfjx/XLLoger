@@ -191,6 +191,8 @@ static XLLogerManager *singleton = nil;
             dispatch_async(dispatch_get_main_queue(), ^{
                 if (self.outputCallback) {
                     self.outputCallback(str);
+                } else {
+                    self.temporaryLog = [NSString stringWithFormat:@"%@%@",self.temporaryLog, str];
                 }
             });
         }
