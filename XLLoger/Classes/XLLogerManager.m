@@ -54,7 +54,7 @@ static XLLogerManager *singleton = nil;
         if (!enable) {
             [[NSUserDefaults standardUserDefaults] setBool:YES forKey:kEnableKey];
         }
-        singleton.enable = [[NSUserDefaults standardUserDefaults] boolForKey:kEnableKey];
+        singleton->_enable = [[NSUserDefaults standardUserDefaults] boolForKey:kEnableKey];
     });
     return singleton;
 }
