@@ -108,12 +108,10 @@ static XLLogerManager *singleton = nil;
 
 - (XLWindow *)window {
     NSAssert(NSThread.isMainThread, @"You must use %@ from the main thread only.", NSStringFromClass([self class]));
-    
     if (!_window) {
         _window = [[XLWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
         _window.eventDelegate = self;
         _window.backgroundColor = [UIColor clearColor];
-//        _window.rootViewController = self.explorerViewController;
     }
     
     return _window;
@@ -133,24 +131,6 @@ static XLLogerManager *singleton = nil;
     if (self.logView) {
         return;
     }
-    
-//    UIWindow *window ;
-//    if (@available(iOS 13.0, *)) {
-//        NSSet *sets = [[UIApplication sharedApplication] connectedScenes];
-//        for (UIScene *scene in sets) {
-//            if (scene.activationState == UISceneActivationStateForegroundActive) {
-//
-//            }
-//        }
-//        UIScene *scene = sets.anyObject;
-//        UIWindowScene *windowScene = (UIWindowScene *)scene;
-//        window = windowScene.windows.firstObject;
-//    } else {
-//        window = [UIApplication sharedApplication].keyWindow;
-//    }
-//    if (!window) {
-//        return;
-//    }
     UIWindow *flex = self.window;
     flex.hidden = NO;
     if (@available(iOS 13.0, *)) {
