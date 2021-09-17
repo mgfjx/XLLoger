@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D271E6B26F4826600D6C2D2 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D271E6A26F4826600D6C2D2 /* TestViewController.m */; };
 		2DCD85B226EE587C00BB3C76 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DCD85B126EE587C00BB3C76 /* AppDelegate.m */; };
 		2DCD85B526EE587C00BB3C76 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DCD85B426EE587C00BB3C76 /* SceneDelegate.m */; };
 		2DCD85B826EE587C00BB3C76 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DCD85B726EE587C00BB3C76 /* ViewController.m */; };
@@ -40,6 +41,8 @@
 
 /* Begin PBXFileReference section */
 		0BAE3F9D9AAB0FBA8C431E84 /* Pods-XLLogerDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XLLogerDemoTests.debug.xcconfig"; path = "Target Support Files/Pods-XLLogerDemoTests/Pods-XLLogerDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2D271E6926F4826600D6C2D2 /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		2D271E6A26F4826600D6C2D2 /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		2DCD85AD26EE587C00BB3C76 /* XLLogerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XLLogerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DCD85B026EE587C00BB3C76 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2DCD85B126EE587C00BB3C76 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -128,6 +131,8 @@
 				2DCD85B426EE587C00BB3C76 /* SceneDelegate.m */,
 				2DCD85B626EE587C00BB3C76 /* ViewController.h */,
 				2DCD85B726EE587C00BB3C76 /* ViewController.m */,
+				2D271E6926F4826600D6C2D2 /* TestViewController.h */,
+				2D271E6A26F4826600D6C2D2 /* TestViewController.m */,
 				2DCD85B926EE587C00BB3C76 /* Main.storyboard */,
 				2DCD85BC26EE587F00BB3C76 /* Assets.xcassets */,
 				2DCD85BE26EE587F00BB3C76 /* LaunchScreen.storyboard */,
@@ -420,6 +425,7 @@
 				2DCD85B226EE587C00BB3C76 /* AppDelegate.m in Sources */,
 				2DCD85C326EE587F00BB3C76 /* main.m in Sources */,
 				2DCD85B526EE587C00BB3C76 /* SceneDelegate.m in Sources */,
+				2D271E6B26F4826600D6C2D2 /* TestViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -593,10 +599,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TNU67Y7CV2;
+				DEVELOPMENT_TEAM = E97K6G9K4T;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/XLLogerDemo/PrefixHeader.pch";
 				INFOPLIST_FILE = XLLogerDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -614,10 +621,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TNU67Y7CV2;
+				DEVELOPMENT_TEAM = E97K6G9K4T;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/XLLogerDemo/PrefixHeader.pch";
 				INFOPLIST_FILE = XLLogerDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

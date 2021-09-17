@@ -29,4 +29,17 @@
     
 }
 
+- (IBAction)recover:(UIButton *)sender {
+    printf("hahaha");
+}
+
+- (IBAction)popController:(UIButton *)sender {
+    
+    UIViewController *vc = [[UIViewController alloc] init];
+    vc.view.backgroundColor = [UIColor orangeColor];
+    vc.modalPresentationStyle = UIModalPresentationPopover;
+    [self presentViewController:vc animated:YES completion:nil];
+    
+}
+
 @end

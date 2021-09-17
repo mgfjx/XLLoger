@@ -307,4 +307,12 @@
     }
 }
 
+- (BOOL)shouldReceiveTouchAtWindowPoint:(CGPoint)pointInWindowCoordinates {
+    BOOL shouldReceiveTouch = NO;
+    if (CGRectContainsPoint(self.frame, pointInWindowCoordinates)) {
+        shouldReceiveTouch = YES;
+    }
+    return shouldReceiveTouch;
+}
+
 @end

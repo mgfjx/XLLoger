@@ -9,6 +9,7 @@ target 'XLLogerDemo' do
 
   # Pods for XLLogerDemo
   pod "XLLoger", :path => "../"
+#  pod 'FLEX', :configurations => ['Debug']
 
   target 'XLLogerDemoTests' do
     inherit! :search_paths

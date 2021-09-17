@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) void (^closeCallback) (void) ;
 @property (nonatomic, strong) NSString *defaultLog ;
 
+- (BOOL)shouldReceiveTouchAtWindowPoint:(CGPoint)pointInWindowCoordinates ;
+
 @end
 
 NS_ASSUME_NONNULL_END

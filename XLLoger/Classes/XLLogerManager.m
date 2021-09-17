@@ -7,14 +7,21 @@
 
 #import "XLLogerManager.h"
 #import "XLLogerView.h"
+#import "XLWindow.h"
 
 #define kEnableKey @"kEnableKey"
 
-@interface XLLogerManager ()
+@interface XLLogerManager ()<FLEXWindowEventDelegate>
 
-@property (nonatomic, strong) UIWindow *window ;
+@property (nonatomic, strong) UIViewController *explorerViewController ;
+@property (nonatomic, strong) XLWindow *window ;
 @property (nonatomic, strong) XLLogerView *logView ;
-@property (nonatomic, strong) NSPipe *outputPipe ;
+
+@property (nonatomic, assign) int outDupValue ;
+@property (nonatomic, assign) int errDupValue ;
+
+@property (nonatomic, strong) dispatch_source_t outSource_t ;
+@property (nonatomic, strong) dispatch_source_t errSource_t ;
 
 /// temporary log if logView don't create
 @property (nonatomic, strong) NSString *temporaryLog ;
@@ -68,20 +75,54 @@ static XLLogerManager *singleton = nil;
     if (!self.enable) {
         return;
     }
+    self.outDupValue = dup(STDOUT_FILENO);
+    self.errDupValue = dup(STDERR_FILENO);
+    
     if (self.autoDestination) {
         if (!isatty(STDERR_FILENO)) {
-            [self captureStandardOutput:STDOUT_FILENO];
-            [self captureStandardOutput:STDERR_FILENO];
+            self.outSource_t = [self _startCapturingWritingToFD:STDOUT_FILENO];
+            self.errSource_t = [self _startCapturingWritingToFD:STDERR_FILENO];
         }
     } else {
-        [self captureStandardOutput:STDOUT_FILENO];
-        [self captureStandardOutput:STDERR_FILENO];
+        self.outSource_t = [self _startCapturingWritingToFD:STDOUT_FILENO];
+        self.errSource_t = [self _startCapturingWritingToFD:STDERR_FILENO];
     }
 }
 
 - (void)setEnable:(BOOL)enable {
     [[NSUserDefaults standardUserDefaults] setBool:enable forKey:kEnableKey];
     _enable = enable;
+    if (enable) {
+        [self prepare];
+    } else {
+        if (self.outSource_t) {
+            dispatch_source_cancel(self.outSource_t);
+        }
+        if (self.errSource_t) {
+            dispatch_source_cancel(self.errSource_t);
+        }
+        dup2(self.outDupValue, STDOUT_FILENO);
+        dup2(self.errDupValue, STDERR_FILENO);
+    }
+}
+
+- (XLWindow *)window {
+    NSAssert(NSThread.isMainThread, @"You must use %@ from the main thread only.", NSStringFromClass([self class]));
+    if (!_window) {
+        _window = [[XLWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+        _window.eventDelegate = self;
+        _window.backgroundColor = [UIColor clearColor];
+    }
+    
+    return _window;
+}
+
+- (UIViewController *)explorerViewController {
+    if (!_explorerViewController) {
+        _explorerViewController = [UIViewController new];
+    }
+
+    return _explorerViewController;
 }
 
 /// add XLLoger View On Root window
@@ -90,31 +131,22 @@ static XLLogerManager *singleton = nil;
     if (self.logView) {
         return;
     }
-    
-    UIWindow *window ;
+    UIWindow *flex = self.window;
+    flex.hidden = NO;
     if (@available(iOS 13.0, *)) {
-        NSSet *sets = [[UIApplication sharedApplication] connectedScenes];
-        for (UIScene *scene in sets) {
-            if (scene.activationState == UISceneActivationStateForegroundActive) {
-                
-            }
+        // Only look for a new scene if we don't have one
+        if (!flex.windowScene) {
+            flex.windowScene = XLLogerManager.appKeyWindow.windowScene;
         }
-        UIScene *scene = sets.anyObject;
-        UIWindowScene *windowScene = (UIWindowScene *)scene;
-        window = windowScene.windows.firstObject;
-    } else {
-        window = [UIApplication sharedApplication].keyWindow;
     }
-    if (!window) {
-        return;
-    }
-    [self showOnView:window];
+    [self showOnView:self.window];
 }
 
 - (void)showOnView:(UIView *)superView {
     XLLogerView *logView = [[XLLogerView alloc] initWithFrame:CGRectMake(20, 88, 300, 400)];
     logView.defaultLog = self.temporaryLog;
     [superView addSubview:logView];
+    logView.layer.zPosition = UIWindowLevelStatusBar + 1;
     self.logView = logView;
     self.temporaryLog = nil;
     
@@ -127,23 +159,79 @@ static XLLogerManager *singleton = nil;
     };
 }
 
-- (void)captureStandardOutput:(int)fd {
-    NSPipe *pipe = [NSPipe pipe];
-    dup2(pipe.fileHandleForWriting.fileDescriptor, fd);
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(redirectNotificationHandle:) name:NSFileHandleReadCompletionNotification object:pipe.fileHandleForReading]; // register notification
-    [pipe.fileHandleForReading readInBackgroundAndNotify];
-    
+- (dispatch_source_t)_startCapturingWritingToFD:(int)fd  {
+
+    int fildes[2];
+    pipe(fildes);  // [0] is read end of pipe while [1] is write end
+    dup2(fildes[1], fd);  // Duplicate write end of pipe "onto" fd (this closes fd)
+    close(fildes[1]);  // Close original write end of pipe
+    fd = fildes[0];  // We can now monitor the read end of the pipe
+
+    char* buffer = malloc(1024);
+    fcntl(fd, F_SETFL, O_NONBLOCK);
+    dispatch_source_t source = dispatch_source_create(DISPATCH_SOURCE_TYPE_READ, fd, 0, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0));
+    dispatch_source_set_cancel_handler(source, ^{
+        free(buffer);
+    });
+    dispatch_source_set_event_handler(source, ^{
+        @autoreleasepool {
+
+            NSMutableData* data = [[NSMutableData alloc] init];
+            while (1) {
+                ssize_t size = read(fd, buffer, 1024);
+                if (size <= 0) {
+                    break;
+                }
+                [data appendBytes:buffer length:size];
+                if (size < 1024) {
+                    break;
+                }
+            }
+            NSString *str = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                if (self.outputCallback) {
+                    self.outputCallback(str);
+                }
+            });
+        }
+    });
+    dispatch_resume(source);
+    return source;
 }
 
-- (void)redirectNotificationHandle:(NSNotification *)nf {
-    NSData *data = [[nf userInfo] objectForKey:NSFileHandleNotificationDataItem];
-    NSString *str = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-    if (self.outputCallback) {
-        self.outputCallback(str);
-    } else {
-        self.temporaryLog = [[NSString alloc] initWithFormat:@"%@%@", self.temporaryLog, str];
++ (UIWindow *)appKeyWindow {
+    // First, check UIApplication.keyWindow
+    XLWindow *window = (id)UIApplication.sharedApplication.keyWindow;
+    if (window) {
+        if ([window isKindOfClass:[XLWindow class]]) {
+            return window.previousKeyWindow;
+        }
+        
+        return window;
     }
-    [[nf object] readInBackgroundAndNotify];
+    
+    // As of iOS 13, UIApplication.keyWindow does not return nil,
+    // so this is more of a safeguard against it returning nil in the future.
+    //
+    // Also, these are obviously not all FLEXWindows; FLEXWindow is used
+    // so we can call window.previousKeyWindow without an ugly cast
+    for (XLWindow *window in UIApplication.sharedApplication.windows) {
+        if (window.isKeyWindow) {
+            if ([window isKindOfClass:[XLWindow class]]) {
+                return window.previousKeyWindow;
+            }
+            
+            return window;
+        }
+    }
+    
+    return nil;
+}
+
+#pragma mark - FLEXWindowEventDelegate
+- (BOOL)shouldHandleTouchAtPoint:(CGPoint)pointInWindow {
+    // Ask the explorer view controller
+    return [self.logView shouldReceiveTouchAtWindowPoint:pointInWindow];
 }
 
 @end
