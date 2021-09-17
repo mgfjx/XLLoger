@@ -9,16 +9,17 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol FLEXWindowEventDelegate <NSObject>
+@protocol XLWindowEventDelegate <NSObject>
 
 - (BOOL)shouldHandleTouchAtPoint:(CGPoint)pointInWindow;
+@optional
 - (BOOL)canBecomeKeyWindow;
 
 @end
 
 @interface XLWindow : UIWindow
 
-@property (nonatomic, weak) id <FLEXWindowEventDelegate> eventDelegate;
+@property (nonatomic, weak) id <XLWindowEventDelegate> eventDelegate;
 
 /// Tracked so we can restore the key window after dismissing a modal.
 /// We need to become key after modal presentation so we can correctly capture input.

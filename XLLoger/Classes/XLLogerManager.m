@@ -11,7 +11,7 @@
 
 #define kEnableKey @"kEnableKey"
 
-@interface XLLogerManager ()<FLEXWindowEventDelegate>
+@interface XLLogerManager ()<XLWindowEventDelegate>
 
 @property (nonatomic, strong) UIViewController *explorerViewController ;
 @property (nonatomic, strong) XLWindow *window ;
@@ -228,7 +228,7 @@ static XLLogerManager *singleton = nil;
     return nil;
 }
 
-#pragma mark - FLEXWindowEventDelegate
+#pragma mark - XLWindowEventDelegate
 - (BOOL)shouldHandleTouchAtPoint:(CGPoint)pointInWindow {
     // Ask the explorer view controller
     return [self.logView shouldReceiveTouchAtWindowPoint:pointInWindow];
