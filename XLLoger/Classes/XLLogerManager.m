@@ -97,9 +97,11 @@ static XLLogerManager *singleton = nil;
     } else {
         if (self.outSource_t) {
             dispatch_source_cancel(self.outSource_t);
+            self.outSource_t = nil;
         }
         if (self.errSource_t) {
             dispatch_source_cancel(self.errSource_t);
+            self.errSource_t = nil;
         }
         dup2(self.outDupValue, STDOUT_FILENO);
         dup2(self.errDupValue, STDERR_FILENO);
@@ -143,7 +145,9 @@ static XLLogerManager *singleton = nil;
 }
 
 - (void)showOnView:(UIView *)superView {
-    XLLogerView *logView = [[XLLogerView alloc] initWithFrame:CGRectMake(20, 88, 300, 400)];
+    CGFloat superHeight = superView.frame.size.height;
+    CGFloat superWidth = superView.frame.size.width;
+    XLLogerView *logView = [[XLLogerView alloc] initWithFrame:CGRectMake(20, 88, superWidth * 3.0/4, superHeight * 3.0/5)];
     logView.defaultLog = self.temporaryLog;
     [superView addSubview:logView];
     logView.layer.zPosition = UIWindowLevelStatusBar + 1;
