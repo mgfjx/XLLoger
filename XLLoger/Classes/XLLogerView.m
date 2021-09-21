@@ -79,12 +79,13 @@
     self.textView = textView;
     
     CGFloat topBottomRate = 0.07;
+    CGFloat topBottomHeight = 30.0f;
     // layout top view
     {
         NSLayoutConstraint *top = [NSLayoutConstraint constraintWithItem:topView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:container attribute:NSLayoutAttributeTop multiplier:1.0 constant:0];
         NSLayoutConstraint *left = [NSLayoutConstraint constraintWithItem:topView attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:container attribute:NSLayoutAttributeLeading multiplier:1.0 constant:0];
         NSLayoutConstraint *right = [NSLayoutConstraint constraintWithItem:topView attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:container attribute:NSLayoutAttributeTrailing multiplier:1.0 constant:0];
-        NSLayoutConstraint *height = [NSLayoutConstraint constraintWithItem:topView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:container attribute:NSLayoutAttributeHeight multiplier:topBottomRate constant:0];
+        NSLayoutConstraint *height = [NSLayoutConstraint constraintWithItem:topView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:topBottomHeight];
         left.active = YES;
         right.active = YES;
         height.active = YES;
@@ -96,7 +97,7 @@
         NSLayoutConstraint *bottom = [NSLayoutConstraint constraintWithItem:bottomView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:container attribute:NSLayoutAttributeBottom multiplier:1.0 constant:0];
         NSLayoutConstraint *left = [NSLayoutConstraint constraintWithItem:bottomView attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:container attribute:NSLayoutAttributeLeading multiplier:1.0 constant:0];
         NSLayoutConstraint *right = [NSLayoutConstraint constraintWithItem:bottomView attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:container attribute:NSLayoutAttributeTrailing multiplier:1.0 constant:0];
-        NSLayoutConstraint *height = [NSLayoutConstraint constraintWithItem:bottomView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:container attribute:NSLayoutAttributeHeight multiplier:topBottomRate constant:0];
+        NSLayoutConstraint *height = [NSLayoutConstraint constraintWithItem:bottomView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:topBottomHeight];
         left.active = YES;
         right.active = YES;
         height.active = YES;

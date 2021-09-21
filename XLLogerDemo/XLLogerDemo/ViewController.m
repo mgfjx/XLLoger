@@ -6,6 +6,7 @@
 //
 
 #import "ViewController.h"
+#import "TestViewController.h"
 
 @interface ViewController ()
 
@@ -35,7 +36,7 @@
 
 - (IBAction)popController:(UIButton *)sender {
     
-    UIViewController *vc = [[UIViewController alloc] init];
+    TestViewController *vc = [[TestViewController alloc] init];
     vc.view.backgroundColor = [UIColor orangeColor];
     vc.modalPresentationStyle = UIModalPresentationPopover;
     [self presentViewController:vc animated:YES completion:nil];

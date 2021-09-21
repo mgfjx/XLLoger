@@ -35,7 +35,11 @@
 }
 
 - (BOOL)canBecomeKeyWindow {
-    return [self.eventDelegate canBecomeKeyWindow];
+    if (self.eventDelegate && [self.eventDelegate respondsToSelector:@selector(canBecomeKeyWindow)]) {
+        return [self.eventDelegate canBecomeKeyWindow];
+    } else {
+        return NO;
+    }
 }
 
 - (void)makeKeyWindow {

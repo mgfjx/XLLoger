@@ -16,8 +16,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.frame = CGRectMake(100, 100, 100, 100);
+    [button addTarget:self action:@selector(btnClicked) forControlEvents:UIControlEventTouchUpInside];
+    button.backgroundColor = [UIColor redColor];
     
+    [self.view addSubview:button];
     
+}
+
+- (void)btnClicked {
+    NSLog(@"btnClicked");
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
