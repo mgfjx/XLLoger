@@ -16,7 +16,7 @@
 @synthesize window = _window;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [[XLLogerManager manager] prepare];
+//    [[XLLogerManager manager] prepare];
     NSLog(@"launch log somthing");
     return YES;
 }

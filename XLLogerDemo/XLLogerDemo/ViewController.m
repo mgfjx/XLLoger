@@ -7,8 +7,12 @@
 
 #import "ViewController.h"
 #import "TestViewController.h"
+#import "XLLogerDemo-Swift.h"
 
 @interface ViewController ()
+
+@property (weak, nonatomic) IBOutlet UITextView *textView;
+@property (nonatomic, strong) LogManager *manager ;
 
 @end
 
@@ -22,6 +26,14 @@
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
 //        [[XLLogerManager manager] showOnWindow];
     });
+    
+    LogManager *manager = [[LogManager alloc] init];
+    [manager openConsolePipe];
+    self.manager = manager;
+    
+    manager.callback = ^(NSString * str) {
+        self.textView.text = [NSString stringWithFormat:@"%@%@", self.textView.text, str];
+    };
 }
 
 - (IBAction)logSomething:(UIButton *)sender {

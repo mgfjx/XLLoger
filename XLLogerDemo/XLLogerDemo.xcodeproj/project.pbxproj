@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2D271E6B26F4826600D6C2D2 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D271E6A26F4826600D6C2D2 /* TestViewController.m */; };
+		2D9B78A826FA278A00AF551F /* LogManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9B78A726FA278A00AF551F /* LogManager.swift */; };
 		2DCD85B226EE587C00BB3C76 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DCD85B126EE587C00BB3C76 /* AppDelegate.m */; };
 		2DCD85B526EE587C00BB3C76 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DCD85B426EE587C00BB3C76 /* SceneDelegate.m */; };
 		2DCD85B826EE587C00BB3C76 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DCD85B726EE587C00BB3C76 /* ViewController.m */; };
@@ -43,6 +44,8 @@
 		0BAE3F9D9AAB0FBA8C431E84 /* Pods-XLLogerDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XLLogerDemoTests.debug.xcconfig"; path = "Target Support Files/Pods-XLLogerDemoTests/Pods-XLLogerDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2D271E6926F4826600D6C2D2 /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		2D271E6A26F4826600D6C2D2 /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		2D9B78A626FA278A00AF551F /* XLLogerDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XLLogerDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		2D9B78A726FA278A00AF551F /* LogManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogManager.swift; sourceTree = "<group>"; };
 		2DCD85AD26EE587C00BB3C76 /* XLLogerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XLLogerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DCD85B026EE587C00BB3C76 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2DCD85B126EE587C00BB3C76 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -133,12 +136,14 @@
 				2DCD85B726EE587C00BB3C76 /* ViewController.m */,
 				2D271E6926F4826600D6C2D2 /* TestViewController.h */,
 				2D271E6A26F4826600D6C2D2 /* TestViewController.m */,
+				2D9B78A726FA278A00AF551F /* LogManager.swift */,
 				2DCD85B926EE587C00BB3C76 /* Main.storyboard */,
 				2DCD85BC26EE587F00BB3C76 /* Assets.xcassets */,
 				2DCD85BE26EE587F00BB3C76 /* LaunchScreen.storyboard */,
 				2DCD85C126EE587F00BB3C76 /* Info.plist */,
 				2DCD85C226EE587F00BB3C76 /* main.m */,
 				2DCD85E526EE59D700BB3C76 /* PrefixHeader.pch */,
+				2D9B78A626FA278A00AF551F /* XLLogerDemo-Bridging-Header.h */,
 			);
 			path = XLLogerDemo;
 			sourceTree = "<group>";
@@ -255,6 +260,7 @@
 				TargetAttributes = {
 					2DCD85AC26EE587C00BB3C76 = {
 						CreatedOnToolsVersion = 12.5;
+						LastSwiftMigration = 1300;
 					};
 					2DCD85C726EE587F00BB3C76 = {
 						CreatedOnToolsVersion = 12.5;
@@ -421,6 +427,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D9B78A826FA278A00AF551F /* LogManager.swift in Sources */,
 				2DCD85B826EE587C00BB3C76 /* ViewController.m in Sources */,
 				2DCD85B226EE587C00BB3C76 /* AppDelegate.m in Sources */,
 				2DCD85C326EE587F00BB3C76 /* main.m in Sources */,
@@ -598,6 +605,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TNU67Y7CV2;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -610,6 +618,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mgfjx.XLLogerDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "XLLogerDemo/XLLogerDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -620,6 +631,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TNU67Y7CV2;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -632,6 +644,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mgfjx.XLLogerDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "XLLogerDemo/XLLogerDemo-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -640,6 +654,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0BAE3F9D9AAB0FBA8C431E84 /* Pods-XLLogerDemoTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = XLLogerDemoTests/Info.plist;
@@ -660,6 +675,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7CF1D2D8C8F7BB5E01F6AE6C /* Pods-XLLogerDemoTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = XLLogerDemoTests/Info.plist;
@@ -680,6 +696,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 85F3348F4FEB80146C0ACDEE /* Pods-XLLogerDemo-XLLogerDemoUITests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = XLLogerDemoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -698,6 +715,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BB3FD0E38D888E64FF02DAFD /* Pods-XLLogerDemo-XLLogerDemoUITests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = XLLogerDemoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
