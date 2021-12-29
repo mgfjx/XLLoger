@@ -7,8 +7,10 @@
 
 #import "XLLogerView.h"
 #import "XLLogerManager.h"
+#import "UIView+xllayout.h"
 
 #define kStatusBarHeight 44
+#define kDescriptionDuration 2.0
 
 @interface XLLogerView ()<UITextViewDelegate> {
     CGFloat contentOffsetX;
@@ -18,6 +20,7 @@
 @property (nonatomic, strong) UITextView *textView;
 @property (nonatomic, strong) UIView *topView;
 @property (nonatomic, strong) UIView *bottomView;
+@property (nonatomic, strong) UILabel *descLabel ;
 
 @property (nonatomic, assign) BOOL autoScroll ;
 
@@ -139,14 +142,12 @@
     closeBtn.translatesAutoresizingMaskIntoConstraints = NO;
     
     CGFloat offset = 3;
-    NSLayoutConstraint *top = [NSLayoutConstraint constraintWithItem:closeBtn attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.topView attribute:NSLayoutAttributeTop multiplier:1.0 constant:offset];
-    NSLayoutConstraint *left = [NSLayoutConstraint constraintWithItem:closeBtn attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.topView attribute:NSLayoutAttributeLeading multiplier:1.0 constant:offset];
-    NSLayoutConstraint *bottom = [NSLayoutConstraint constraintWithItem:closeBtn attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.topView attribute:NSLayoutAttributeBottom multiplier:1.0 constant:-offset];
-    NSLayoutConstraint *width = [NSLayoutConstraint constraintWithItem:closeBtn attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:closeBtn attribute:NSLayoutAttributeHeight multiplier:1.0 constant:0];
-    left.active = YES;
-    bottom.active = YES;
-    width.active = YES;
-    top.active = YES;
+    [closeBtn activateConstraints:@[
+        closeBtn.widthAnchor.equalTo(closeBtn.heightAnchor),
+        closeBtn.topAnchor.equalTo(self.topView.topAnchor).offset(offset),
+        closeBtn.leftAnchor.equalTo(self.topView.leftAnchor).offset(offset),
+        closeBtn.bottomAnchor.equalTo(self.topView.bottomAnchor).offset(-offset)
+    ]];
     
     UIButton *clearBtn;
     {
@@ -160,14 +161,12 @@
         clearBtn = btn;
         
         CGFloat offset = 3;
-        NSLayoutConstraint *top = [NSLayoutConstraint constraintWithItem:btn attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.topView attribute:NSLayoutAttributeTop multiplier:1.0 constant:offset];
-        NSLayoutConstraint *right = [NSLayoutConstraint constraintWithItem:btn attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.topView attribute:NSLayoutAttributeTrailing multiplier:1.0 constant:-offset];
-        NSLayoutConstraint *bottom = [NSLayoutConstraint constraintWithItem:btn attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.topView attribute:NSLayoutAttributeBottom multiplier:1.0 constant:-offset];
-        NSLayoutConstraint *width = [NSLayoutConstraint constraintWithItem:btn attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:btn attribute:NSLayoutAttributeHeight multiplier:1.0 constant:0];
-        right.active = YES;
-        bottom.active = YES;
-        width.active = YES;
-        top.active = YES;
+        [btn activateConstraints:@[
+            btn.widthAnchor.equalTo(btn.heightAnchor),
+            btn.topAnchor.equalTo(self.topView.topAnchor).offset(offset),
+            btn.rightAnchor.equalTo(self.topView.rightAnchor).offset(-offset),
+            btn.bottomAnchor.equalTo(self.topView.bottomAnchor).offset(-offset)
+        ]];
     }
     
     UIButton *copyBtn;
@@ -182,14 +181,30 @@
         copyBtn = btn;
         
         CGFloat offset = 3;
-        NSLayoutConstraint *top = [NSLayoutConstraint constraintWithItem:btn attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.topView attribute:NSLayoutAttributeTop multiplier:1.0 constant:offset];
-        NSLayoutConstraint *right = [NSLayoutConstraint constraintWithItem:btn attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:clearBtn attribute:NSLayoutAttributeLeading multiplier:1.0 constant:-offset*3];
-        NSLayoutConstraint *bottom = [NSLayoutConstraint constraintWithItem:btn attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.topView attribute:NSLayoutAttributeBottom multiplier:1.0 constant:-offset];
-        NSLayoutConstraint *width = [NSLayoutConstraint constraintWithItem:btn attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:btn attribute:NSLayoutAttributeHeight multiplier:1.0 constant:0];
-        right.active = YES;
-        bottom.active = YES;
-        width.active = YES;
-        top.active = YES;
+        [btn activateConstraints:@[
+            btn.widthAnchor.equalTo(btn.heightAnchor),
+            btn.topAnchor.equalTo(self.topView.topAnchor).offset(offset),
+            btn.rightAnchor.equalTo(clearBtn.leftAnchor).offset(-offset*3),
+            btn.bottomAnchor.equalTo(self.topView.bottomAnchor).offset(-offset)
+        ]];
+    }
+    
+    UILabel *descLabel;
+    {
+        UILabel *label = [[UILabel alloc] init];
+        label.font = [UIFont systemFontOfSize:10];
+        label.textAlignment = NSTextAlignmentRight;
+        [self.topView addSubview:label];
+        descLabel = label;
+        self.descLabel = label;
+        
+        CGFloat offset = 3;
+        [label activateConstraints:@[
+//            label.leftAnchor.equalTo(closeBtn.rightAnchor).offset(offset),
+            label.topAnchor.equalTo(self.topView.topAnchor).offset(offset),
+            label.rightAnchor.equalTo(copyBtn.leftAnchor).offset(-offset*3),
+            label.bottomAnchor.equalTo(self.topView.bottomAnchor).offset(-offset)
+        ]];
     }
     
 }
@@ -207,14 +222,12 @@
     checkBtn.selected = ![XLLogerManager manager].enable;
     
     CGFloat offset = 3;
-    NSLayoutConstraint *top = [NSLayoutConstraint constraintWithItem:checkBtn attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.bottomView attribute:NSLayoutAttributeTop multiplier:1.0 constant:offset];
-    NSLayoutConstraint *left = [NSLayoutConstraint constraintWithItem:checkBtn attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.bottomView attribute:NSLayoutAttributeLeading multiplier:1.0 constant:offset];
-    NSLayoutConstraint *bottom = [NSLayoutConstraint constraintWithItem:checkBtn attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.bottomView attribute:NSLayoutAttributeBottom multiplier:1.0 constant:-offset];
-    NSLayoutConstraint *width = [NSLayoutConstraint constraintWithItem:checkBtn attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:checkBtn attribute:NSLayoutAttributeHeight multiplier:1.0 constant:0];
-    left.active = YES;
-    bottom.active = YES;
-    width.active = YES;
-    top.active = YES;
+    [checkBtn activateConstraints:@[
+        checkBtn.widthAnchor.equalTo(checkBtn.heightAnchor),
+        checkBtn.topAnchor.equalTo(self.bottomView.topAnchor).offset(offset),
+        checkBtn.leftAnchor.equalTo(self.bottomView.leftAnchor).offset(offset),
+        checkBtn.bottomAnchor.equalTo(self.bottomView.bottomAnchor).offset(-offset)
+    ]];
     
     {
         UILabel *textLabel = [[UILabel alloc] init];
@@ -224,12 +237,11 @@
         textLabel.translatesAutoresizingMaskIntoConstraints = NO;
         
         CGFloat offset = 3;
-        NSLayoutConstraint *centerY = [NSLayoutConstraint constraintWithItem:textLabel attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:checkBtn attribute:NSLayoutAttributeCenterY multiplier:1.0 constant:0];
-        NSLayoutConstraint *right = [NSLayoutConstraint constraintWithItem:textLabel attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.bottomView attribute:NSLayoutAttributeTrailing multiplier:1.0 constant:-offset];
-        NSLayoutConstraint *left = [NSLayoutConstraint constraintWithItem:textLabel attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:checkBtn attribute:NSLayoutAttributeTrailing multiplier:1.0 constant:5];
-        right.active = YES;
-        left.active = YES;
-        centerY.active = YES;
+        [textLabel activateConstraints:@[
+            textLabel.centerYAnchor.equalTo(checkBtn.centerYAnchor),
+            textLabel.leftAnchor.equalTo(checkBtn.rightAnchor).offset(offset),
+            textLabel.rightAnchor.equalTo(self.bottomView.rightAnchor).offset(-offset)
+        ]];
     }
 }
 
@@ -260,6 +272,10 @@
 - (void)clearText {
     self.textView.text = @"";
     self.autoScroll = YES;
+    self.descLabel.text = @"Cleared!";
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(kDescriptionDuration * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        self.descLabel.text = nil;
+    });
 }
 
 - (void)copyText {
@@ -272,6 +288,11 @@
     
     UIPasteboard *board = [UIPasteboard generalPasteboard];
     board.string = copyText;
+    
+    self.descLabel.text = copyText.length == 0 ? @"Copied nothing!" : @"Copied!";
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(kDescriptionDuration * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        self.descLabel.text = nil;
+    });
 }
 
 /// drag gesture
