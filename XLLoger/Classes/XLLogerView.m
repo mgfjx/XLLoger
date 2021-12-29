@@ -148,20 +148,44 @@
     width.active = YES;
     top.active = YES;
     
+    UIButton *clearBtn;
     {
-        UIButton *clearBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [clearBtn addTarget:self action:@selector(clearText) forControlEvents:UIControlEventTouchUpInside];
-        [clearBtn setImage:[self imageForResourcePath:@"XLLoger.bundle/clear" ofType:@"png" inBundle:[NSBundle bundleForClass:[self class]]] forState:UIControlStateNormal];
-        clearBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentFill;
-        clearBtn.contentVerticalAlignment = UIControlContentVerticalAlignmentFill;
-        [self.topView addSubview:clearBtn];
-        clearBtn.translatesAutoresizingMaskIntoConstraints = NO;
+        UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [btn addTarget:self action:@selector(clearText) forControlEvents:UIControlEventTouchUpInside];
+        [btn setImage:[self imageForResourcePath:@"XLLoger.bundle/clear" ofType:@"png" inBundle:[NSBundle bundleForClass:[self class]]] forState:UIControlStateNormal];
+        btn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentFill;
+        btn.contentVerticalAlignment = UIControlContentVerticalAlignmentFill;
+        [self.topView addSubview:btn];
+        btn.translatesAutoresizingMaskIntoConstraints = NO;
+        clearBtn = btn;
         
         CGFloat offset = 3;
-        NSLayoutConstraint *top = [NSLayoutConstraint constraintWithItem:clearBtn attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.topView attribute:NSLayoutAttributeTop multiplier:1.0 constant:offset];
-        NSLayoutConstraint *right = [NSLayoutConstraint constraintWithItem:clearBtn attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.topView attribute:NSLayoutAttributeTrailing multiplier:1.0 constant:-offset];
-        NSLayoutConstraint *bottom = [NSLayoutConstraint constraintWithItem:clearBtn attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.topView attribute:NSLayoutAttributeBottom multiplier:1.0 constant:-offset];
-        NSLayoutConstraint *width = [NSLayoutConstraint constraintWithItem:clearBtn attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:clearBtn attribute:NSLayoutAttributeHeight multiplier:1.0 constant:0];
+        NSLayoutConstraint *top = [NSLayoutConstraint constraintWithItem:btn attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.topView attribute:NSLayoutAttributeTop multiplier:1.0 constant:offset];
+        NSLayoutConstraint *right = [NSLayoutConstraint constraintWithItem:btn attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.topView attribute:NSLayoutAttributeTrailing multiplier:1.0 constant:-offset];
+        NSLayoutConstraint *bottom = [NSLayoutConstraint constraintWithItem:btn attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.topView attribute:NSLayoutAttributeBottom multiplier:1.0 constant:-offset];
+        NSLayoutConstraint *width = [NSLayoutConstraint constraintWithItem:btn attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:btn attribute:NSLayoutAttributeHeight multiplier:1.0 constant:0];
+        right.active = YES;
+        bottom.active = YES;
+        width.active = YES;
+        top.active = YES;
+    }
+    
+    UIButton *copyBtn;
+    {
+        UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [btn addTarget:self action:@selector(copyText) forControlEvents:UIControlEventTouchUpInside];
+        [btn setImage:[self imageForResourcePath:@"XLLoger.bundle/copy" ofType:@"png" inBundle:[NSBundle bundleForClass:[self class]]] forState:UIControlStateNormal];
+        btn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentFill;
+        btn.contentVerticalAlignment = UIControlContentVerticalAlignmentFill;
+        [self.topView addSubview:btn];
+        btn.translatesAutoresizingMaskIntoConstraints = NO;
+        copyBtn = btn;
+        
+        CGFloat offset = 3;
+        NSLayoutConstraint *top = [NSLayoutConstraint constraintWithItem:btn attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.topView attribute:NSLayoutAttributeTop multiplier:1.0 constant:offset];
+        NSLayoutConstraint *right = [NSLayoutConstraint constraintWithItem:btn attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:clearBtn attribute:NSLayoutAttributeLeading multiplier:1.0 constant:-offset*3];
+        NSLayoutConstraint *bottom = [NSLayoutConstraint constraintWithItem:btn attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.topView attribute:NSLayoutAttributeBottom multiplier:1.0 constant:-offset];
+        NSLayoutConstraint *width = [NSLayoutConstraint constraintWithItem:btn attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:btn attribute:NSLayoutAttributeHeight multiplier:1.0 constant:0];
         right.active = YES;
         bottom.active = YES;
         width.active = YES;
@@ -236,6 +260,18 @@
 - (void)clearText {
     self.textView.text = @"";
     self.autoScroll = YES;
+}
+
+- (void)copyText {
+    NSString *copyText = self.textView.text;
+    NSRange range = self.textView.selectedRange;
+    if (range.length > 0) { //复制选中的内容
+        copyText = [copyText substringWithRange:range];
+        self.textView.selectedRange = NSMakeRange(0, 0);
+    }
+    
+    UIPasteboard *board = [UIPasteboard generalPasteboard];
+    board.string = copyText;
 }
 
 /// drag gesture

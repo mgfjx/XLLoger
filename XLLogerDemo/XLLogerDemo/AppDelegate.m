@@ -16,7 +16,8 @@
 @synthesize window = _window;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-//    [[XLLogerManager manager] prepare];
+    [XLLogerManager manager].autoDestination = NO;
+    [[XLLogerManager manager] prepare];
     NSLog(@"launch log somthing");
     return YES;
 }

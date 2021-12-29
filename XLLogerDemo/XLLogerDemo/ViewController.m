@@ -27,13 +27,13 @@
 //        [[XLLogerManager manager] showOnWindow];
     });
     
-    LogManager *manager = [[LogManager alloc] init];
-    [manager openConsolePipe];
-    self.manager = manager;
-    
-    manager.callback = ^(NSString * str) {
-        self.textView.text = [NSString stringWithFormat:@"%@%@", self.textView.text, str];
-    };
+//    LogManager *manager = [[LogManager alloc] init];
+//    [manager openConsolePipe];
+//    self.manager = manager;
+//    
+//    manager.callback = ^(NSString * str) {
+//        self.textView.text = [NSString stringWithFormat:@"%@%@", self.textView.text, str];
+//    };
 }
 
 - (IBAction)logSomething:(UIButton *)sender {
